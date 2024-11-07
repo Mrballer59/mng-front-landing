@@ -32,12 +32,13 @@ import { ArrowRight } from "lucide-vue-next";
               class="text-transparent bg-gradient-to-r from-[#43c841] to-primary bg-clip-text"
               >Mr Nice Guy
             </span>
-            Memebership club
+            Membership club
           </h1>
         </div>
 
         <p class="max-w-screen-sm mx-auto text-xl text-muted-foreground">
-          RANDOM TEXT HERE We're more than just a tool, we're a community of passionate creators.
+          RANDOM TEXT HERE We're more than just a tool, we're a community of
+          passionate creators.
         </p>
 
         <div class="space-y-4 md:space-y-0 md:space-x-4">
@@ -48,11 +49,7 @@ import { ArrowRight } from "lucide-vue-next";
             />
           </Button>
 
-          <Button
-            as-child
-            variant="secondary"
-            class="w-5/6 md:w-1/4 font-bold"
-          >
+          <Button as-child variant="secondary" class="w-5/6 md:w-1/4 font-bold">
             <a
               href="https://github.com/leoMirandaa/shadcn-vue-landing-page.git"
               target="_blank"
@@ -67,7 +64,7 @@ import { ArrowRight } from "lucide-vue-next";
         <div
           class="absolute -top-6 right-12 w-[90%] h-12 lg:h-[80%] bg-primary/50 blur-3xl rounded-full img-shadow-animation"
         ></div>
-<!-- 
+        <!-- 
         <img
           class="w-full md:w-[1200px] mx-auto rounded-lg relative rouded-lg leading-none flex items-center border border-t-2 border-t-primary/30 img-border-animation"
           :src="
