@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { useColorMode } from "@vueuse/core";
-const mode = useColorMode();
+//import { useColorMode } from "@vueuse/core";
+//const mode = useColorMode();
 
-import { Badge } from "@/components/ui/badge";
+//import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-vue-next";
 </script>
@@ -99,7 +99,7 @@ import { ArrowRight } from "lucide-vue-next";
   animation-direction: alternate;
 }
 
-@keyframes img-shadow-animation {
+/* @keyframes img-shadow-animation {
   from {
     opacity: 0.5;
     transform: translateY(30px);
@@ -118,5 +118,5 @@ import { ArrowRight } from "lucide-vue-next";
   to {
     @apply border-t-primary/60;
   }
-}
+} */
 </style>

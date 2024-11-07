@@ -4,18 +4,19 @@ import { Button } from "./ui/button";
 import { Card, CardHeader, CardContent, CardFooter } from "./ui/card";
 import { Label } from "./ui/label";
 import { Input } from "./ui/input";
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "./ui/select";
-import { Textarea } from "./ui/textarea";
+// import {
+//   Select,
+//   SelectContent,
+//   SelectGroup,
+//   SelectItem,
+//   SelectTrigger,
+//   SelectValue,
+// } from "./ui/select";
+//import { Textarea } from "./ui/textarea";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 
-import { AlertCircle, Building2, Phone, Mail, Clock } from "lucide-vue-next";
+import { AlertCircle,  } from "lucide-vue-next"; 
+//(Stuff that was coming from lucide-vue-next) Building2, Phone, Mail, Clock
 import { userService } from "@/services/userService";
 
 interface ContactFormeProps {
@@ -65,9 +66,10 @@ const handleSubmit = async () => {
     });
 
     // Show success message
-    successMessage.value =
-      "Thank you for registering! Please check your email.";
+    successMessage.value = 
+      `Thank you ${response.user.firstName} for registering! Please check your email (${response.user.email}).`;
     showSuccess.value = true;
+
 
     // Optionally, reset the form after successful submission
     contactForm.firstName = "";
