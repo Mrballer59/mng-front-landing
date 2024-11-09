@@ -11,7 +11,7 @@ import {
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
+  
 } from "@/components/ui/navigation-menu";
 import {
   Sheet,
@@ -25,8 +25,8 @@ import {
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 
-import { ChevronsDown, Menu } from "lucide-vue-next";
-import GithubIcon from "@/icons/GithubIcon.vue";
+import { Flame, Menu } from "lucide-vue-next";
+//import GithubIcon from "@/icons/GithubIcon.vue";
 import ToggleTheme from "./ToggleTheme.vue";
 
 interface RouteProps {
@@ -34,46 +34,46 @@ interface RouteProps {
   label: string;
 }
 
-interface FeatureProps {
-  title: string;
-  description: string;
-}
+// interface FeatureProps {
+//   title: string;
+//   description: string;
+// }
 
 const routeList: RouteProps[] = [
-  {
-    href: "#testimonials",
-    label: "Testimonials",
-  },
-  {
-    href: "#team",
-    label: "Team",
-  },
-  {
-    href: "#contact",
-    label: "Contact",
-  },
-  {
-    href: "#faq",
-    label: "FAQ",
-  },
+  // {
+  //   href: "#testimonials",
+  //   label: "Testimonials",
+  // },
+  // {
+  //   href: "#team",
+  //   label: "Team",
+  // },
+  // {
+  //   href: "#contact",
+  //   label: "Contact",
+  // },
+  // {
+  //   href: "#faq",
+  //   label: "FAQ",
+  // },
 ];
 
-const featureList: FeatureProps[] = [
-  {
-    title: "Showcase Your Value ",
-    description: "Highlight how your product solves user problems.",
-  },
-  {
-    title: "Build Trust",
-    description:
-      "Leverages social proof elements to establish trust and credibility.",
-  },
-  {
-    title: "Capture Leads",
-    description:
-      "Make your lead capture form visually appealing and strategically.",
-  },
-];
+// const featureList: FeatureProps[] = [
+//   {
+//     title: "Showcase Your Value ",
+//     description: "Highlight how your product solves user problems.",
+//   },
+//   {
+//     title: "Build Trust",
+//     description:
+//       "Leverages social proof elements to establish trust and credibility.",
+//   },
+//   {
+//     title: "Capture Leads",
+//     description:
+//       "Make your lead capture form visually appealing and strategically.",
+//   },
+// ];
 
 const isOpen = ref<boolean>(false);
 </script>
@@ -90,10 +90,10 @@ const isOpen = ref<boolean>(false);
       href="/"
       class="font-bold text-lg flex items-center"
     >
-      <ChevronsDown
+      <Flame
         class="bg-gradient-to-tr from-primary via-primary/70 to-primary rounded-lg w-9 h-9 mr-2 border text-white"
       />
-      MrNiceGuy Fleur</a
+      Mr Nice Guy Flower Club 🌿</a
     >
     <!-- Mobile -->
     <div class="flex items-center lg:hidden">
@@ -116,7 +116,7 @@ const isOpen = ref<boolean>(false);
                   href="/"
                   class="flex items-center"
                 >
-                  <ChevronsDown
+                  <Flame
                     class="bg-gradient-to-tr from-primary/70 via-primary to-primary/70 rounded-lg size-9 mr-2 border text-white"
                   />
                    MrNiceGuy Fleur
@@ -155,9 +155,9 @@ const isOpen = ref<boolean>(false);
     <NavigationMenu class="hidden lg:block">
       <NavigationMenuList>
         <NavigationMenuItem>
-          <NavigationMenuTrigger class="bg-card text-base">
+          <!-- <NavigationMenuTrigger class="bg-card text-base">
             Features
-          </NavigationMenuTrigger>
+          </NavigationMenuTrigger> -->
           <NavigationMenuContent>
             <div class="grid w-[600px] grid-cols-2 gap-5 p-4">
               <img
@@ -165,7 +165,7 @@ const isOpen = ref<boolean>(false);
                 alt="Beach"
                 class="h-full w-full rounded-md object-cover"
               />
-              <ul class="flex flex-col gap-2">
+              <!-- <ul class="flex flex-col gap-2">
                 <li
                   v-for="{ title, description } in featureList"
                   :key="title"
@@ -178,7 +178,7 @@ const isOpen = ref<boolean>(false);
                     {{ description }}
                   </p>
                 </li>
-              </ul>
+              </ul> -->
             </div>
           </NavigationMenuContent>
         </NavigationMenuItem>
@@ -204,7 +204,7 @@ const isOpen = ref<boolean>(false);
     <div class="hidden lg:flex">
       <ToggleTheme />
 
-      <Button
+      <!-- <Button
         as-child
         size="sm"
         variant="ghost"
@@ -217,7 +217,7 @@ const isOpen = ref<boolean>(false);
         >
           <GithubIcon class="size-5" />
         </a>
-      </Button>
+      </Button> -->
     </div>
   </header>
 </template>

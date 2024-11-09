@@ -95,7 +95,7 @@ const handleSubmit = async () => {
 <template>
   <section id="contact" class="container py-24 sm:py-32">
     <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
-      <h2 class="text-3xl md:text-4xl font-bold">Connect With Us</h2>
+      <h2 class="text-3xl md:text-4xl font-bold">Rejoignez-nous</h2>
       <!-- <div>
         <div class="mb-4">
           <h2 class="text-lg text-primary mb-2 tracking-wider">Contact</h2>

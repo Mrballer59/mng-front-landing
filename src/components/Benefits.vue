@@ -5,9 +5,9 @@ import {
   Sparkle,
   Tag,
   Paintbrush,
-  Blocks,
+  Cannabis,
   LineChart,
-  Wallet,
+  Brain,
 } from "lucide-vue-next";
 
 interface BenefitsProps {
@@ -18,28 +18,28 @@ interface BenefitsProps {
 
 const benefitList: BenefitsProps[] = [
   {
-    icon: "blocks",
-    title: "Build Brand Trust",
+    icon: "Cannabis",
+    title: "Confiance & Communauté",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam. Natus consectetur dolores.",
+      "Rejoignez notre cercle exclusif dédié au bien-être naturel et à la découverte florale.",
   },
   {
     icon: "lineChart",
-    title: "More Leads",
+    title: "Sélection Raffinée",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam, natus consectetur.",
+      "Une sélection minutieuse des meilleures fleurs CBD, cultivées avec soin en respectant les normes françaises.",
   },
   {
-    icon: "wallet",
-    title: "Higher Conversions",
+    icon: "Brain",
+    title: "Expertise & Conseil",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus consectetur. A odio velit cum aliquam",
+      "Bénéficiez de conseils personnalisés et découvrez l'art du bien-être naturel avec nos experts.",
   },
   {
     icon: "sparkle",
-    title: "Test Marketing Ideas",
+    title: "Garantie Qualité",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam. Natus consectetur dolores.",
+      "Chaque produit est rigoureusement testé pour garantir qualité, pureté et conformité aux normes.",
   },
 ];
 
@@ -48,16 +48,16 @@ const iconMap: Record<
   | typeof Sparkle
   | typeof Tag
   | typeof Paintbrush
-  | typeof Blocks
+  | typeof Cannabis
   | typeof LineChart
-  | typeof Wallet
+  | typeof Brain
 > = {
   sparkle: Sparkle,
   tag: Tag,
   paintbrush: Paintbrush,
-  blocks: Blocks,
+  Cannabis: Cannabis,
   lineChart: LineChart,
-  wallet: Wallet,
+  Brain: Brain,
 };
 </script>
 
@@ -71,12 +71,10 @@ const iconMap: Record<
         <h2 class="text-lg text-primary mb-2 tracking-wider">Benefits</h2>
 
         <h2 class="text-3xl md:text-4xl font-bold mb-4">
-          Your Shortcut to Success
+          Excellence Florale
         </h2>
         <p class="text-xl text-muted-foreground mb-8">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non ducimus
-          reprehenderit architecto rerum similique facere odit deleniti
-          necessitatibus quo quae.
+          Découvrez notre collection exclusive de fleurs CBD premium, soigneusement sélectionnées pour les connaisseurs exigeants. Un mariage parfait entre tradition française et innovation bien-être, notre club vous offre une expérience unique dans l'univers raffiné du CBD.
         </p>
       </div>
 

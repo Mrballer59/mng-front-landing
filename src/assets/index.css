@@ -76,8 +76,12 @@ html {
 /* *=========== Orange theme =========== */
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 20 14.3% 4.1%;
+    /* --background: 0 0% 100%;
+    --foreground: 20 14.3% 4.1%; */
+
+    --background: 60 33% 96%; /* #f9f9f1 */
+    --foreground: 220 7% 22%; /* #34363B */
+
 
     --card: 0 0% 100%;
     --card-foreground: 20 14.3% 4.1%;
@@ -85,7 +89,9 @@ html {
     --popover: 0 0% 100%;
     --popover-foreground: 20 14.3% 4.1%;
 
-    --primary: 24.6 95% 53.1%;
+    /* --primary: 24.6 95% 53.1%; */
+    --primary: 210 21% 57%; /* Changed to #7791ac */
+
     --primary-foreground: 60 9.1% 97.8%;
 
     --secondary: 60 4.8% 95.9%;
@@ -107,8 +113,11 @@ html {
   }
 
   .dark {
-    --background: 20 14.3% 4.1%;
-    --foreground: 60 9.1% 97.8%;
+    /* --background: 20 14.3% 4.1%;
+    --foreground: 60 9.1% 97.8%; */
+
+    --background: 220 7% 22%; /* #34363B */
+    --foreground: 60 33% 96%; /* #f9f9f1 */
 
     --card: 24 9.8% 8%;
     --card-foreground: 0 0% 95%;
@@ -116,7 +125,9 @@ html {
     --popover: 20 14.3% 4.1%;
     --popover-foreground: 60 9.1% 97.8%;
 
-    --primary: 20.5 90.2% 48.2%;
+    /* --primary: 20.5 90.2% 48.2%; */
+    --primary: 210 21% 57%; /* Changed to #7791ac */
+
     --primary-foreground: 60 9.1% 97.8%;
 
     --secondary: 12 6.5% 15.1%;

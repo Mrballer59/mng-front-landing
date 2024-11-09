@@ -11,33 +11,33 @@ interface HowItWorksProps {
 
 const HowItWorksList: HowItWorksProps[] = [
   {
-    badgeTitle: "Contribute",
-    title: "Make a Difference with Every Contribution",
+    badgeTitle: "Créer",
+    title: "L'Art du Mélange Moderne",
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem fugiat, quasi sint reiciendis quidem iure.",
-    image: "roboto.png",
+      "Une symphonie botanique unique où notre CBD, riche en terpènes, s'unit au légendaire Lotus Bleu d'Égypte. Cette alliance précieuse, enrichie de damiana, passiflore, guimauve et framboise, crée une expérience sensorielle d'exception.",
+    image: "Mr-Nice-Guy Flower-Club-Logo-03.png",
   },
   {
-    badgeTitle: "Discover",
-    title: "Create an Impact with Every Choice",
+    badgeTitle: "Explorer",
+    title: "L'Essence des Plantes Nobles",
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem fugiat, sint reiciendis quidem iure veritatis optio facere tenetur.",
-    image: "runner.png",
+      "Une composition d'herboriste contemporain qui réinvente l'art ancestral des mélanges botaniques pour un moment de pure sérénité",
+      image: "Herbes_Mystiques_Packaging-removebg-preview.png",
   },
   {
-    badgeTitle: "Innovate",
-    title: "Make Every Action Count",
+    badgeTitle: "Innover",
+    title: "Chaque geste compte",
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem fugiat, odit similique quasi sint.",
-    image: "pacheco.png",
+      "Notre engagement va au-delà du simple produit. Chaque étape de notre processus est minutieusement pensée pour vous offrir une expérience CBD d'exception, respectueuse de l'environnement et de votre bien-être.",
+    image: "Herbes-Mystiques-Packaging-Preroll.png",
   },
-  {
-    badgeTitle: "Collaborate",
-    title: "Tackle this challenge together",
-    description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem fugiat, quasi sint reiciendis quidem iure.",
-    image: "gamestation.png",
-  },
+  // {
+  //   badgeTitle: "Collaborate",
+  //   title: "L'Élégance Myrtille",
+  //   description:
+  //     "Une variété d'exception aux notes sucrées de myrtilles fraîches, offrant une expérience gustative unique. Notre Blueberry CBD séduit par son profil aromatique gourmand et ses effets délicatement relaxants",
+  //   image: "blueberry-removebg-preview.png",
+  // },
 ];
 </script>
 
@@ -48,11 +48,11 @@ const HowItWorksList: HowItWorksProps[] = [
   >
     <div class="text-center mb-8">
       <h2 class="text-lg text-primary text-center mb-2 tracking-wider">
-        How It Works
+        Comment ça marche
       </h2>
 
       <h2 class="text-3xl md:text-4xl text-center font-bold">
-        Step-by-Step Process
+        Un processus raffiné
       </h2>
     </div>
 
@@ -78,7 +78,7 @@ const HowItWorksList: HowItWorksProps[] = [
             </CardTitle>
           </CardHeader>
 
-          <CardContent class="text-muted-foreground w-[80%]">
+          <CardContent class="text-muted-foreground ">
             {{ description }}
           </CardContent>
         </Card>
@@ -86,7 +86,7 @@ const HowItWorksList: HowItWorksProps[] = [
         <img
           :src="image"
           :alt="`Image describing ${title} `"
-          className="w-[150px]  md:w-[250px] lg:w-[300px] mx-auto -scale-x-100 "
+          className="w-[150px]  md:w-[250px] lg:w-[300px] mx-auto "
         />
         <div
           :class="[

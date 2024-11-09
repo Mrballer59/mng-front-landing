@@ -1,10 +1,10 @@
 <script setup lang="ts">
-//import { useColorMode } from "@vueuse/core";
-//const mode = useColorMode();
+import { useColorMode } from "@vueuse/core";
+const mode = useColorMode();
 
 //import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-vue-next";
+//import { Button } from "@/components/ui/button";
+//import { ArrowRight } from "lucide-vue-next";
 </script>
 
 <template>
@@ -27,21 +27,20 @@ import { ArrowRight } from "lucide-vue-next";
           class="max-w-screen-md mx-auto text-center text-5xl md:text-6xl font-bold"
         >
           <h1>
-            Bienvenido a
+            Découvrez Flower Club
             <span
               class="text-transparent bg-gradient-to-r from-[#43c841] to-primary bg-clip-text"
-              >Mr Nice Guy
+              > 
             </span>
-            Membership club
+           
           </h1>
         </div>
 
         <p class="max-w-screen-sm mx-auto text-xl text-muted-foreground">
-          RANDOM TEXT HERE We're more than just a tool, we're a community of
-          passionate creators.
+     
         </p>
 
-        <div class="space-y-4 md:space-y-0 md:space-x-4">
+        <!-- <div class="space-y-4 md:space-y-0 md:space-x-4">
           <Button class="w-5/6 md:w-1/4 font-bold group/arrow">
             Get Started
             <ArrowRight
@@ -56,7 +55,7 @@ import { ArrowRight } from "lucide-vue-next";
               >Github respository</a
             >
           </Button>
-        </div>
+        </div> -->
       </div>
 
       <div class="relative group mt-14">
@@ -64,14 +63,14 @@ import { ArrowRight } from "lucide-vue-next";
         <div
           class="absolute -top-6 right-12 w-[90%] h-12 lg:h-[80%] bg-primary/50 blur-3xl rounded-full img-shadow-animation"
         ></div>
-        <!-- 
+        
         <img
-          class="w-full md:w-[1200px] mx-auto rounded-lg relative rouded-lg leading-none flex items-center border border-t-2 border-t-primary/30 img-border-animation"
+          class="w-full md:w-[1200px] mx-auto rounded-lg relative rouded-lg leading-none flex items-center border-t-primary/30 img-border-animation"
           :src="
-            mode == 'light' ? 'hero-image-light.jpg' : 'hero-image-dark.jpg'
+            mode == 'light' ? 'MNG-img.svg' : 'MNG-IMG-cream.svg'
           "
           alt="dashboard using shadcn-vue"
-        /> -->
+        />
 
         <!-- gradient effect img -->
         <div
