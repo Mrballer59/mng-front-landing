@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { ref, reactive } from "vue";
-import { Button } from "./ui/button";
-import { Card, CardHeader, CardContent, CardFooter } from "./ui/card";
-import { Label } from "./ui/label";
-import { Input } from "./ui/input";
+import { ref, reactive } from 'vue';
+import { Button } from './ui/button';
+import { Card, CardHeader, CardContent, CardFooter } from './ui/card';
+import { Label } from './ui/label';
+import { Input } from './ui/input';
 // import {
 //   Select,
 //   SelectContent,
@@ -13,11 +13,11 @@ import { Input } from "./ui/input";
 //   SelectValue,
 // } from "./ui/select";
 //import { Textarea } from "./ui/textarea";
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 
-import { AlertCircle,  } from "lucide-vue-next"; 
+import { AlertCircle, Mail } from 'lucide-vue-next';
 //(Stuff that was coming from lucide-vue-next) Building2, Phone, Mail, Clock
-import { userService } from "@/services/userService";
+import { userService } from '@/services/userService';
 
 interface ContactFormeProps {
   firstName: string;
@@ -28,31 +28,31 @@ interface ContactFormeProps {
 }
 
 const contactForm = reactive<ContactFormeProps>({
-  firstName: "",
-  lastName: "",
-  email: "",
+  firstName: '',
+  lastName: '',
+  email: '',
   // subject: "Web Development",
   // message: "",
 });
 
 const isSubmitting = ref(false);
 const invalidInputForm = ref<boolean>(false);
-const successMessage = ref<string>("");
-const errorMessage = ref<string>("");
+const successMessage = ref<string>('');
+const errorMessage = ref<string>('');
 const showSuccess = ref(false);
 
 const handleSubmit = async () => {
   try {
     // Reset states
     invalidInputForm.value = false;
-    errorMessage.value = "";
-    successMessage.value = "";
+    errorMessage.value = '';
+    successMessage.value = '';
     showSuccess.value = false;
 
     // Validate form
     if (!contactForm.firstName || !contactForm.lastName || !contactForm.email) {
       invalidInputForm.value = true;
-      errorMessage.value = "Please fill in all required fields.";
+      errorMessage.value = 'Please fill in all required fields.';
       return;
     }
 
@@ -66,15 +66,13 @@ const handleSubmit = async () => {
     });
 
     // Show success message
-    successMessage.value = 
-      `Thank you ${response.user.firstName} for registering! Please check your email (${response.user.email}).`;
+    successMessage.value = `Thank you ${response.user.firstName} for registering! Please check your email (${response.user.email}).`;
     showSuccess.value = true;
 
-
     // Optionally, reset the form after successful submission
-    contactForm.firstName = "";
-    contactForm.lastName = "";
-    contactForm.email = "";
+    contactForm.firstName = '';
+    contactForm.lastName = '';
+    contactForm.email = '';
     // contactForm.subject = "Web Development";
     // contactForm.message = "";
 
@@ -85,7 +83,7 @@ const handleSubmit = async () => {
   } catch (error: any) {
     invalidInputForm.value = true;
     errorMessage.value =
-      error.response?.data?.message || "An error occurred. Please try again.";
+      error.response?.data?.message || 'An error occurred. Please try again.';
   } finally {
     isSubmitting.value = false;
   }
@@ -94,62 +92,12 @@ const handleSubmit = async () => {
 
 <template>
   <section id="contact" class="container py-24 sm:py-32">
-    <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
-      <h2 class="text-3xl md:text-4xl font-bold">Rejoignez-nous</h2>
-      <!-- <div>
-        <div class="mb-4">
-          <h2 class="text-lg text-primary mb-2 tracking-wider">Contact</h2>
-
-        </div>
-        <p class="mb-8 text-muted-foreground lg:w-5/6">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
-          ipsam sint enim exercitationem ex autem corrupti quas tenetur
-        </p>
-
-        <div class="flex flex-col gap-4">
-          <div>
-            <div class="flex gap-2 mb-1">
-              <Building2 />
-              <div class="font-bold">Find Us</div>
-            </div>
-
-            <div>742 Evergreen Terrace, Springfield, IL 62704</div>
-          </div>
-
-          <div>
-            <div class="flex gap-2 mb-1">
-              <Phone />
-              <div class="font-bold">Call Us</div>
-            </div>
-
-            <div>+1 (619) 123-4567</div>
-          </div>
-
-          <div>
-            <div class="flex gap-2 mb-1">
-              <Mail />
-              <div class="font-bold">Mail Us</div>
-            </div>
-
-            <div>leomirandadev@gmail.com</div>
-          </div>
-
-          <div>
-            <div class="flex gap-2">
-              <Clock />
-              <div class="font-bold">Visit Us</div>
-            </div>
-
-            <div>
-              <div>Monday - Friday</div>
-              <div>8AM - 4PM</div>
-            </div>
-          </div>
-        </div>
-      </div> -->
-
+    <section class="grid grid-cols-1 place-items-center gap-8">
+      <h2 class="text-3xl mb-8 md:text-4xl font-bold">
+        Rejoignez le Flower Club
+      </h2>
       <!-- form -->
-      <Card class="bg-muted/60 dark:bg-card">
+      <Card class="bg-muted/60 dark:bg-car w-full max-w-2xl">
         <CardHeader class="text-primary text-2xl"> </CardHeader>
         <CardContent>
           <form @submit.prevent="handleSubmit" class="grid gap-4">
@@ -180,7 +128,7 @@ const handleSubmit = async () => {
             </Transition>
             <div class="flex flex-col md:flex-row gap-8">
               <div class="flex flex-col w-full gap-1.5">
-                <Label for="first-name">First Name</Label>
+                <Label for="first-name">Prénom</Label>
                 <Input
                   id="first-name"
                   type="text"
@@ -192,7 +140,7 @@ const handleSubmit = async () => {
               </div>
 
               <div class="flex flex-col w-full gap-1.5">
-                <Label for="last-name">Last Name</Label>
+                <Label for="last-name">Nom de Famille</Label>
                 <Input
                   id="last-name"
                   type="text"
@@ -215,42 +163,6 @@ const handleSubmit = async () => {
                 :disabled="isSubmitting"
               />
             </div>
-
-            <!-- <div class="flex flex-col gap-1.5">
-              <Label for="subject">Subject</Label>
-
-              <Select v-model="contactForm.subject">
-                <SelectTrigger>
-                  <SelectValue placeholder="Select a subject" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectGroup>
-                    <SelectItem value="Web Development">
-                      Web Development
-                    </SelectItem>
-                    <SelectItem value="Mobile Development">
-                      Mobile Development
-                    </SelectItem>
-                    <SelectItem value="Figma Design"> Figma Design </SelectItem>
-                    <SelectItem value="REST API "> REST API </SelectItem>
-                    <SelectItem value="FullStack Project">
-                      FullStack Project
-                    </SelectItem>
-                  </SelectGroup>
-                </SelectContent>
-              </Select>
-            </div> -->
-
-            <!-- <div class="flex flex-col gap-1.5">
-              <Label for="message">Message</Label>
-              <Textarea
-                id="message"
-                placeholder="Your message..."
-                rows="5"
-                v-model="contactForm.message"
-              />
-            </div> -->
-
             <Alert v-if="invalidInputForm" variant="destructive">
               <AlertCircle class="w-4 h-4" />
               <AlertTitle>Error</AlertTitle>
@@ -258,14 +170,28 @@ const handleSubmit = async () => {
                 There is an error in the form. Please check your input.
               </AlertDescription>
             </Alert>
+            <div class="mt-5 text-center">
+              <div class="max-w-md mx-auto">
+                <div class="flex gap-2">
+                  <Button
+                    :disabled="isSubmitting"
+                    :class="{ 'opacity-50 cursor-not-allowed': isSubmitting }"
+                    variant="outline"
+                    class="w-full gap-2"
+                  >
+                    <Mail class="size-4" />
 
-            <Button
-              class="mt-4"
-              :disabled="isSubmitting"
-              :class="{ 'opacity-50 cursor-not-allowed': isSubmitting }"
-            >
-              {{ isSubmitting ? "Sending..." : "Send message" }}
-            </Button>
+                    {{
+                      isSubmitting ? 'Envoyer...' : "S'inscrire à la newsletter"
+                    }}
+                  </Button>
+                </div>
+                <p class="text-sm text-muted-foreground mt-4">
+                  Recevez des codes promo exclusifs, des offres spéciales et
+                  soyez le premier à découvrir nos nouveautés.
+                </p>
+              </div>
+            </div>
           </form>
         </CardContent>
 
