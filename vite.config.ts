@@ -12,10 +12,7 @@ export default defineConfig({
     },
   },
   plugins: [vue()],
-  base:
-    process.env.VITE_APP_ENV === 'staging'
-      ? '/mng-landing-page/' // GitHub Pages path
-      : '/', // Netlify will use root path
+  base: '/mng-front-landing/', // Must match your repository name
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
