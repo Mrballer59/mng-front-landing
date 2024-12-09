@@ -80,40 +80,33 @@ const reviewList: ReviewProps[] = [
 <template>
   <section id="testimonials" class="container py-24 sm:py-32">
     <div class="text-center mb-8">
-      <h2 class="text-lg text-primary text-center mb-2 tracking-wider">
+      <h2
+        class="text-3xl md:text-4xl text-primary text-center mb-2 tracking-wider"
+      >
         Témoignages
       </h2>
 
-      <h2 class="text-3xl md:text-4xl text-center font-bold mb-4">
-        Ce qu'en pesent nos clients
+      <h2 class="text-4xl md:text-5xl text-center font-bold mb-4">
+        Ce qu’en pensent nos utilisateurs
       </h2>
     </div>
 
-    <!-- Video Section -->
     <div class="max-w-4xl mx-auto mb-16">
       <div
         class="relative w-full aspect-video rounded-lg overflow-hidden shadow-xl"
       >
-        <!-- Placeholder div for video - replace with actual video when ready -->
         <div
           class="absolute inset-0 bg-muted/20 flex items-center justify-center"
         >
-          <!-- You can replace this div with your video element when ready -->
           <iframe
             v-if="true"
             class="w-full aspect-video rounded-lg shadow-xl"
-            src="https://player.vimeo.com/video/1019494541?h=6fb3ca5006"
+            src="https://player.vimeo.com/video/1037265250?dnt=1&byline=0&portrait=0&title=0"
             title="Client Testimonial Video"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
           ></iframe>
-
-          <!-- Placeholder content - remove when adding real video -->
-          <!-- <div class="text-center">
-            <p class="text-muted-foreground">Video Testimonial Coming Soon</p>
-            <p class="text-sm text-muted-foreground/60">16:9 Aspect Ratio</p>
-          </div> -->
         </div>
       </div>
     </div>

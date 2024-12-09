@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import Navbar from './components/Navbar.vue';
 import Hero from './components/Hero.vue';
-import Benefits from './components/Benefits.vue';
+// import Benefits from './components/Benefits.vue';
 import Features from './components/Features.vue';
 import Services from './components/Services.vue';
 import HowItWorks from './components/HowItWorks.vue';
@@ -20,7 +20,7 @@ import CTASection from './components/CTASection.vue';
 <template>
   <Navbar />
   <Hero />
-  <Benefits />
+  <!-- <Benefits /> -->
   <HowItWorks />
   <!-- <Sponsors /> -->
   <Features />

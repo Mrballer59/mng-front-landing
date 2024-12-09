@@ -1,9 +1,9 @@
 <script lang="ts" setup>
-import { ref } from "vue";
+import { ref } from 'vue';
 
-import { useColorMode } from "@vueuse/core";
+import { useColorMode } from '@vueuse/core';
 const mode = useColorMode();
-mode.value = "dark";
+mode.value = 'dark';
 
 import {
   NavigationMenu,
@@ -11,8 +11,7 @@ import {
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  
-} from "@/components/ui/navigation-menu";
+} from '@/components/ui/navigation-menu';
 import {
   Sheet,
   SheetContent,
@@ -20,14 +19,14 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/components/ui/sheet";
+} from '@/components/ui/sheet';
 
-import { Button } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
+import { Button } from '@/components/ui/button';
+import { Separator } from '@/components/ui/separator';
 
-import { Flame, Menu } from "lucide-vue-next";
+import { Flame, Menu } from 'lucide-vue-next';
 //import GithubIcon from "@/icons/GithubIcon.vue";
-import ToggleTheme from "./ToggleTheme.vue";
+import ToggleTheme from './ToggleTheme.vue';
 
 interface RouteProps {
   href: string;
@@ -40,22 +39,22 @@ interface RouteProps {
 // }
 
 const routeList: RouteProps[] = [
-  // {
-  //   href: "#testimonials",
-  //   label: "Testimonials",
-  // },
-  // {
-  //   href: "#team",
-  //   label: "Team",
-  // },
-  // {
-  //   href: "#contact",
-  //   label: "Contact",
-  // },
-  // {
-  //   href: "#faq",
-  //   label: "FAQ",
-  // },
+  {
+    href: '#testimonials',
+    label: 'Testimonials',
+  },
+  {
+    href: '#team',
+    label: 'Team',
+  },
+  {
+    href: '#contact',
+    label: 'Contact',
+  },
+  {
+    href: '#faq',
+    label: 'FAQ',
+  },
 ];
 
 // const featureList: FeatureProps[] = [
@@ -86,23 +85,17 @@ const isOpen = ref<boolean>(false);
       'w-[90%] md:w-[70%] lg:w-[75%] lg:max-w-screen-xl top-5 mx-auto sticky border z-40 rounded-2xl flex justify-between items-center p-2 bg-card shadow-md': true,
     }"
   >
-    <a
-      href="/"
-      class="font-bold text-lg flex items-center"
-    >
-      <Flame
+    <a href="/" class="font-bold text-lg flex items-center">
+      <!-- <Flame
         class="bg-gradient-to-tr from-primary via-primary/70 to-primary rounded-lg w-9 h-9 mr-2 border text-white"
-      />
-      Mr Nice Guy Flower Club 🌿</a
+      /> -->
+      Flower Club</a
     >
     <!-- Mobile -->
     <div class="flex items-center lg:hidden">
       <Sheet v-model:open="isOpen">
         <SheetTrigger as-child>
-          <Menu
-            @click="isOpen = true"
-            class="cursor-pointer"
-          />
+          <Menu @click="isOpen = true" class="cursor-pointer" />
         </SheetTrigger>
 
         <SheetContent
@@ -112,14 +105,11 @@ const isOpen = ref<boolean>(false);
           <div>
             <SheetHeader class="mb-4 ml-4">
               <SheetTitle class="flex items-center">
-                <a
-                  href="/"
-                  class="flex items-center"
-                >
+                <a href="/" class="flex items-center">
                   <Flame
                     class="bg-gradient-to-tr from-primary/70 via-primary to-primary/70 rounded-lg size-9 mr-2 border text-white"
                   />
-                   MrNiceGuy Fleur
+                  MrNiceGuy Fleur
                 </a>
               </SheetTitle>
             </SheetHeader>
@@ -132,10 +122,7 @@ const isOpen = ref<boolean>(false);
                 variant="ghost"
                 class="justify-start text-base"
               >
-                <a
-                  @click="isOpen = false"
-                  :href="href"
-                >
+                <a @click="isOpen = false" :href="href">
                   {{ label }}
                 </a>
               </Button>
