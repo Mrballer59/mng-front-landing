@@ -130,7 +130,6 @@ const navigateToShop = () => {
 </style> -->
 <script setup lang="ts">
 import { Button } from '@/components/ui/button';
-import { ArrowRight } from 'lucide-vue-next';
 
 const navigateToShop = () => {
   window.location.href = 'https://mrniceguyfleur.com/shop';

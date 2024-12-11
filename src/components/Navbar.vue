@@ -24,7 +24,6 @@ import {
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 
-import { Flame, Menu } from 'lucide-vue-next';
 //import GithubIcon from "@/icons/GithubIcon.vue";
 import ToggleTheme from './ToggleTheme.vue';
 
