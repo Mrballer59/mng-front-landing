@@ -141,28 +141,53 @@ const navigateToShop = () => {
   <section class="container">
     <div class="relative min-h-screen">
       <!-- Main Content Container -->
-      <div class="w-full max-w-[90rem] mx-auto rounded-3xl p-8 md:p-12 my-8">
+      <div class="w-full max-w-[90rem] mx-auto rounded-3xl p-3 md:p-12 my-8">
         <!-- Heading moved to top -->
-        <h1
-          class="text-4xl md:text-5xl lg:text-5xl font-bold mb-12 text-center"
-        >
-          Découvrez une alternative naturelle
+        <h1 class="text-4xl md:text-5xl lg:text-5xl font-bold mb-8 text-center">
+          Un mélange d'herbes
           <span
             class="text-transparent bg-gradient-to-r from-[#43c841] to-primary bg-clip-text"
           >
-            qui change tout
+            à base de CBD
           </span>
+          prêt à l’emploi, pour votre réel plaisir mais sans tabac.
+          <!-- <span
+
+          Un mélange d'herbes à base de CBD prêt à l’emploi, pour le réel plaisir mais sans tabac.
+            class="text-transparent bg-gradient-to-r from-[#43c841] to-primary bg-clip-text"
+          >
+          Un mélange d'herbes à base de CBD prêt à l’emploi, pour un plaisir sans compromis, ni tabac.
+            
+          </span> -->
         </h1>
+        <div class="relative group">
+          <div
+            class="absolute -inset-1 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-3xl blur-2xl opacity-50 group-hover:opacity-75 transition duration-500"
+          ></div>
+          <div class="relative aspect-square overflow-hidden rounded-2xl">
+            <img
+              src="/Herbes-Mythiques-New-hero.jpg"
+              alt="Herbes Mythiques"
+              class="w-full h-full object-contain object-center transform group-hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+        </div>
+        <div class="text-center">
+          <Button size="lg" @click="navigateToShop" class="gap-2">
+            Découvrez notre concept Herbes Mythiques ®
+          </Button>
+        </div>
         <div class="space-y-6">
-          <p class="text-xl text-center text-muted-foreground">
-            Dites adieu au stress et à la nicotine. Découvrez une nouvelle façon
-            de vous détendre naturellement.
+          <p class="text-xl text-center text-white mt-10">
+            Un mélange unique et premium de fleurs (CBD et lotus bleu d'Égypte
+            BIO) et de feuilles aromatiques, préparé à la main en France avec
+            des plantes de haute qualité.
           </p>
         </div>
 
-        <div class="grid lg:grid-cols-2 gap-12 items-center">
-          <!-- Left Column: Image -->
-          <div class="relative group">
+        <!--  <div class="grid lg:grid-cols-2 gap-12 items-center">
+          Left Column: Image -->
+        <!-- <div class="relative group">
             <div
               class="absolute -inset-1 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-3xl blur-2xl opacity-50 group-hover:opacity-75 transition duration-500"
             ></div>
@@ -173,10 +198,14 @@ const navigateToShop = () => {
                 class="w-full h-full object-contain object-center transform group-hover:scale-105 transition-transform duration-500"
               />
             </div>
-          </div>
+            <Button size="lg" @click="navigateToShop" class="gap-2">
+              Découvrez nos produits
+              <ArrowRight class="h-5 w-5" />
+            </Button>
+          </div> -->
 
-          <!-- Right Column: Content -->
-          <div class="space-y-8 order-1 lg:order-2">
+        <!-- Right Column: Content -->
+        <!-- <div class="space-y-8 order-1 lg:order-2">
             <div class="space-y-6">
               <div class="space-y-4 border-l-2 border-primary/20 pl-4">
                 <p class="text-lg text-muted-foreground">
@@ -197,8 +226,8 @@ const navigateToShop = () => {
                 </Button>
               </div>
             </div>
-          </div>
-        </div>
+          </div> 
+        </div>-->
       </div>
 
       <!-- Decorative Elements -->
@@ -236,7 +265,7 @@ const navigateToShop = () => {
 /* Mobile optimization for title */
 @media (max-width: 768px) {
   h1 {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     line-height: 1.2;
   }
 }

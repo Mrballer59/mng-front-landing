@@ -85,7 +85,7 @@ const isOpen = ref<boolean>(false);
       'w-[90%] md:w-[70%] lg:w-[75%] lg:max-w-screen-xl top-5 mx-auto sticky border z-40 rounded-2xl flex justify-between items-center p-2 bg-card shadow-md': true,
     }"
   >
-    <a href="/" class="font-bold text-lg flex items-center">
+    <a href="/" class="font-bold text-lg pl-0.5 flex items-center">
       <!-- <Flame
         class="bg-gradient-to-tr from-primary via-primary/70 to-primary rounded-lg w-9 h-9 mr-2 border text-white"
       /> -->
@@ -106,10 +106,10 @@ const isOpen = ref<boolean>(false);
             <SheetHeader class="mb-4 ml-4">
               <SheetTitle class="flex items-center">
                 <a href="/" class="flex items-center">
-                  <Flame
+                  <!-- <Flame
                     class="bg-gradient-to-tr from-primary/70 via-primary to-primary/70 rounded-lg size-9 mr-2 border text-white"
-                  />
-                  MrNiceGuy Fleur
+                  /> -->
+                  Flower Club
                 </a>
               </SheetTitle>
             </SheetHeader>
