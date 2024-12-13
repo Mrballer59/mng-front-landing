@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { ref } from 'vue';
+import { Menu } from 'lucide-vue-next';
 
 import { useColorMode } from '@vueuse/core';
 const mode = useColorMode();
@@ -24,7 +25,6 @@ import {
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 
-//import GithubIcon from "@/icons/GithubIcon.vue";
 import ToggleTheme from './ToggleTheme.vue';
 
 interface RouteProps {
@@ -39,27 +39,35 @@ interface RouteProps {
 
 const routeList: RouteProps[] = [
   {
+    href: '#concept',
+    label: 'Concept',
+  },
+  {
+    href: '#composition',
+    label: 'Composition',
+  },
+  {
     href: '#testimonials',
-    label: 'Testimonials',
+    label: 'Témoignages',
   },
   {
-    href: '#team',
-    label: 'Team',
+    href: '#promotion',
+    label: 'Promotion',
   },
   {
-    href: '#contact',
-    label: 'Contact',
+    href: '#garantie',
+    label: 'Garantie',
   },
   {
-    href: '#faq',
-    label: 'FAQ',
+    href: '#newsletter',
+    label: 'Newsletter',
   },
 ];
 
 // const featureList: FeatureProps[] = [
+
 //   {
 //     title: "Showcase Your Value ",
-//     description: "Highlight how your product solves user problems.",
 //   },
 //   {
 //     title: "Build Trust",
@@ -84,7 +92,7 @@ const isOpen = ref<boolean>(false);
       'w-[90%] md:w-[70%] lg:w-[75%] lg:max-w-screen-xl top-5 mx-auto sticky border z-40 rounded-2xl flex justify-between items-center p-2 bg-card shadow-md': true,
     }"
   >
-    <a href="/" class="font-bold text-lg pl-0.5 flex items-center">
+    <a href="/" class="font-bold text-lg pl-1.5 flex items-center">
       <!-- <Flame
         class="bg-gradient-to-tr from-primary via-primary/70 to-primary rounded-lg w-9 h-9 mr-2 border text-white"
       /> -->

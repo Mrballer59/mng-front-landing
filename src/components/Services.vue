@@ -43,7 +43,7 @@ const serviceList: ServiceProps[] = [
 </script>
 
 <template>
-  <section id="shipping" class="container py-24 sm:py-32 bg-muted/30">
+  <section id="garantie" class="container py-24 sm:py-32 bg-muted/30">
     <h2 class="text-4xl md:text-5xl text-center font-bold mb-4">
       Achetez sans risque
     </h2>

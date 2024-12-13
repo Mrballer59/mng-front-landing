@@ -118,31 +118,34 @@ les irritations et offrant un confort à chaque respiration.`,
   },
 ];
 </script>
+<!-- composition -->
 
 <template>
-  <div class="container py-12">
-    <Card class="border border-primary/10">
-      <CardHeader>
-        <h3 class="text-2xl font-semibold text-center">
-          Découvrez notre formule unique.
-        </h3>
-      </CardHeader>
-      <CardContent>
-        <Accordion type="single" collapsible class="w-full">
-          <AccordionItem
-            v-for="item in compositionDetails"
-            :key="item.id"
-            :value="item.id"
-          >
-            <AccordionTrigger class="hover:text-primary">
-              {{ item.title }}
-            </AccordionTrigger>
-            <AccordionContent class="text-muted-foreground">
-              {{ item.content }}
-            </AccordionContent>
-          </AccordionItem>
-        </Accordion>
-      </CardContent>
-    </Card>
-  </div>
+  <section id="composition">
+    <div class="container py-12">
+      <Card class="border border-primary/10">
+        <CardHeader>
+          <h3 class="text-2xl font-semibold text-center">
+            Découvrez notre formule unique.
+          </h3>
+        </CardHeader>
+        <CardContent>
+          <Accordion type="single" collapsible class="w-full">
+            <AccordionItem
+              v-for="item in compositionDetails"
+              :key="item.id"
+              :value="item.id"
+            >
+              <AccordionTrigger class="hover:text-primary">
+                {{ item.title }}
+              </AccordionTrigger>
+              <AccordionContent class="text-muted-foreground">
+                {{ item.content }}
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+        </CardContent>
+      </Card>
+    </div>
+  </section>
 </template>

@@ -1,133 +1,3 @@
-<!-- <script setup lang="ts">
-import { useColorMode } from '@vueuse/core';
-const mode = useColorMode();
-//import { Badge } from "@/components/ui/badge";
-import { Button } from '@/components/ui/button';
-import { ArrowRight } from 'lucide-vue-next';
-
-const navigateToShop = () => {
-  window.location.href = 'https://mrniceguyfleur.com/shop';
-};
-</script>
-
-<template>
-  <section class="container">
-    <div
-      class="grid place-items-center lg:max-w-screen-xl gap-8 mx-auto py-20 md:py-32"
-    >
-      <div class="text-center space-y-8">
-        <div
-          class="max-w-screen-md mx-auto text-center text-5xl md:text-6xl font-bold"
-        >
-          <h1>
-            Découvrez une alternative naturelle
-            <span
-              class="text-transparent bg-gradient-to-r from-[#43c841] to-primary bg-clip-text"
-            >
-              qui change tout
-            </span>
-          </h1>
-        </div>
-
-        <p class="max-w-screen-sm mx-auto text-xl text-muted-foreground">
-          Dites adieu au stress et à la nicotine. Découvrez une nouvelle façon
-          de vous détendre naturellement. Herbes Mythiques : l’avant-goût d’un
-          avenir de bien-être naturel Ce mélange unique au CBD et au lotus bleu
-          d'Égypte est conçu en France avec des plantes de haute qualité, pour
-          des moments de détente pur et sans compromis.
-        </p>
-        <div
-          class="relative overflow-hidden rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 group"
-        >
-          <div
-            class="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 mix-blend-overlay"
-          ></div>
-          <img
-            src="/Herbes-Mythiques-hero.jpg"
-            alt="Herbes Mythiques"
-            class="w-full h-auto transform group-hover:scale-105 transition-transform duration-300"
-          />
-        </div>
-        <p class="max-w-screen-sm mx-auto text-xl text-muted-foreground">
-          Pourquoi choisir Herbes Mythiques ?<br />
-          Herbes Mythiques est un mélange floral puissant sans nicotine,
-          fabriqué à la main en France avec des plantes bio de qualité
-          supérieure, directement sourcées auprès des producteurs.
-        </p>
-      </div>
-      <p class="max-w-screen-sm mx-auto text-xl text-muted-foreground">
-        Pour une expérience unique qui apaise le corps et l’esprit, Herbes
-        Mythiques devient votre solution incontournable, la référence naturelle
-        pour transformer vos rituels quotidiens avec une alternative moderne et
-        saine.
-      </p>
-      <Button size="lg" class="mt-8" @click="navigateToShop">
-        Découvrez nos produits
-        <ArrowRight class="ml-2 h-5 w-5" />
-      </Button>
-    </div>
-    <div class="relative group mt-14">
-      <div
-        class="absolute -top-6 right-12 w-[90%] h-12 lg:h-[80%] bg-primary/50 blur-3xl rounded-full img-shadow-animation"
-      ></div>
-
-      <img
-        class="w-full md:w-[1200px] mx-auto rounded-lg relative rouded-lg leading-none flex items-center border-t-primary/30 img-border-animation"
-        :src="mode == 'light' ? 'MNG-img.svg' : 'MNG-IMG-cream.svg'"
-        alt="dashboard using shadcn-vue"
-      />
-
-      <div
-        class="absolute bottom-0 left-0 w-full h-20 md:h-28 bg-gradient-to-b from-background/0 via-background/50 to-background rounded-lg"
-      ></div>
-    </div>
-  </section>
-</template>
-
-<style scoped>
-.parallax {
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.img-shadow-animation {
-  animation-name: img-shadow-animation;
-  animation-iteration-count: infinite;
-  animation-duration: 2s;
-  animation-timing-function: linear;
-  animation-direction: alternate;
-}
-
-.img-border-animation {
-  animation-name: img-border-animation;
-  animation-iteration-count: infinite;
-  animation-duration: 2s;
-  animation-timing-function: linear;
-  animation-direction: alternate;
-}
-
-@keyframes img-shadow-animation {
-  from {
-    opacity: 0.5;
-    transform: translateY(30px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
-@keyframes img-border-animation {
-  from {
-    @apply border-t-primary/10;
-  }
-
-  to {
-    @apply border-t-primary/60;
-  }
-}
-</style> -->
 <script setup lang="ts">
 import { Button } from '@/components/ui/button';
 
@@ -149,15 +19,7 @@ const navigateToShop = () => {
           >
             à base de CBD
           </span>
-          prêt à l’emploi, pour votre réel plaisir mais sans tabac.
-          <!-- <span
-
-          Un mélange d'herbes à base de CBD prêt à l’emploi, pour le réel plaisir mais sans tabac.
-            class="text-transparent bg-gradient-to-r from-[#43c841] to-primary bg-clip-text"
-          >
-          Un mélange d'herbes à base de CBD prêt à l’emploi, pour un plaisir sans compromis, ni tabac.
-            
-          </span> -->
+          prêt à l’emploi, pour vos moments de plaisir, sans le tabac!
         </h1>
         <div class="relative group">
           <div
@@ -171,11 +33,13 @@ const navigateToShop = () => {
             />
           </div>
         </div>
-        <div class="text-center">
+        <div class="flex justify-center w-full">
+          <!-- New container for button -->
           <Button size="lg" @click="navigateToShop" class="gap-2">
             Découvrez notre concept Herbes Mythiques ®
           </Button>
         </div>
+
         <div class="space-y-6">
           <p class="text-xl text-center text-white mt-10">
             Un mélange unique et premium de fleurs (CBD et lotus bleu d'Égypte
@@ -239,14 +103,14 @@ const navigateToShop = () => {
     </div>
 
     <!-- Additional Content -->
-    <div class="max-w-3xl mx-auto text-center pb-20">
+    <!-- <div class="max-w-3xl mx-auto text-center pb-20">
       <p class="text-xl text-muted-foreground">
         Pour une expérience unique qui apaise le corps et l'esprit, Herbes
         Mythiques devient votre solution incontournable, la référence naturelle
         pour transformer vos rituels quotidiens avec une alternative moderne et
         saine.
       </p>
-    </div>
+    </div> -->
   </section>
 </template>
 

@@ -4,7 +4,7 @@ import Hero from './components/Hero.vue';
 // import Benefits from './components/Benefits.vue';
 import Features from './components/Features.vue';
 import Services from './components/Services.vue';
-import HowItWorks from './components/HowItWorks.vue';
+// import HowItWorks from './components/HowItWorks.vue';
 // import Sponsors from './components/Sponsors.vue';
 import Testimonials from './components/Testimonials.vue';
 //import Team from "./components/Team.vue";
@@ -20,17 +20,17 @@ import CTASection from './components/CTASection.vue';
 <template>
   <Navbar />
   <Hero />
-  <!-- <Benefits /> -->
-  <HowItWorks />
-  <!-- <Sponsors /> -->
   <Features />
   <AccordionSection />
-  <Services />
+  <!-- <Benefits /> -->
+  <!-- <HowItWorks /> -->
+  <!-- <Sponsors /> -->
   <Testimonials />
+  <CTASection />
+  <Services />
   <!-- <Team /> -->
   <!-- <Community /> -->
   <!-- <Pricing /> -->
-  <CTASection />
   <Contact />
   <!-- <FAQ /> -->
   <!-- <Footer /> -->

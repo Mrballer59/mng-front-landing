@@ -9,7 +9,7 @@ const handleClick = () => {
 </script>
 
 <template>
-  <section class="relative py-24 sm:py-32 overflow-hidden">
+  <section id="promotion" class="relative py-24 sm:py-32 overflow-hidden">
     <div class="container relative z-10">
       <!-- Main CTA -->
       <Card

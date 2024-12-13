@@ -91,7 +91,7 @@ const handleSubmit = async () => {
 </script>
 
 <template>
-  <section id="contact" class="container py-24 sm:py-32">
+  <section id="newsletter" class="container py-24 sm:py-32">
     <section class="grid grid-cols-1 place-items-center gap-8">
       <h2 class="text-3xl mb-8 md:text-4xl font-bold">
         Rejoignez le Flower Club
