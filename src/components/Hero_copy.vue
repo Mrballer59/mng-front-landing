@@ -6,12 +6,12 @@ const navigateToShop = () => {
   window.location.href = 'https://mrniceguyfleur.com/shop';
 };
 
-// const chefImages = [
-//   { src: 'public/chef-image-1.jpg', alt: 'Chef profile 1' },
-//   { src: 'public/chef-image-2.jpg', alt: 'Chef profile 2' },
-//   { src: 'public/chef-image-3.jpg', alt: 'Chef profile 3' },
-//   { src: 'public/chef-image-4.jpg', alt: 'Chef profile 4' },
-// ];
+const chefImages = [
+  { src: 'public/chef-image-1.jpg', alt: 'Chef profile 1' },
+  { src: 'public/chef-image-2.jpg', alt: 'Chef profile 2' },
+  { src: 'public/chef-image-3.jpg', alt: 'Chef profile 3' },
+  { src: 'public/chef-image-4.jpg', alt: 'Chef profile 4' },
+];
 
 const chefDescription = `Fleur de Lotus Bleu d'Égypte, Feuille de Molène, Feuille de
               Passiflore, Feuille de Guimauve, Fleur de Lotus Bleu d'Égypte,
