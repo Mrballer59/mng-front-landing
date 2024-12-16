@@ -2,19 +2,19 @@
 // Define the botanical images data
 const botanicalImages = [
   {
-    src: 'public/botanical-1.jpg',
+    src: 'botanical-1.jpg',
     alt: 'Passion flower illustration',
     width: 200,
     height: 369,
   },
   {
-    src: 'public/botanical-1.jpg',
+    src: 'botanical-1.jpg',
     alt: 'Pink flower illustration',
     width: 200,
     height: 369,
   },
   {
-    src: 'public/botanical-1.jpg',
+    src: 'botanical-1.jpg',
     alt: 'Berry branch illustration',
     width: 200,
     height: 369,
