@@ -86,12 +86,22 @@ module.exports = {
           from: { height: 'var(--radix-collapsible-content-height)' },
           to: { height: 0 },
         },
+        typewriter: {
+          from: { width: '0' },
+          to: { width: '100%' },
+        },
+        blink: {
+          'from, to': { borderColor: 'currentColor' },
+          '50%': { borderColor: 'transparent' },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
         'collapsible-down': 'collapsible-down 0.2s ease-in-out',
         'collapsible-up': 'collapsible-up 0.2s ease-in-out',
+        typewriter: 'typewriter 3.5s cubic-bezier(0.4, 0, 0.2, 1) forwards',
+        'blink-caret': 'blink 0.75s step-end infinite',
       },
     },
   },

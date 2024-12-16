@@ -3,7 +3,8 @@ import { Button } from '@/components/ui/button';
 import ImgCard from './custom/ImgCard.vue';
 
 const navigateToShop = () => {
-  window.location.href = 'https://mrniceguyfleur.com/shop';
+  window.location.href =
+    'https://mrniceguyfleur.com/shop/herbes-mythiques-melange-cbd-lotus-base-florale-10g-110#attr=';
 };
 
 const chefImages = [
@@ -31,37 +32,60 @@ const chefDescription = `Fleur de Lotus Bleu d'Égypte, Feuille de Molène, Feui
           <!-- Left Content -->
           <div class="md:w-1/2 space-y-6">
             <h1
-              class="font-tomorrow text-3xl md:text-4xl lg:text-5xl font-bold"
+              class="font-tomorrow text-3xl text-center md:text-4xl lg:text-5xl font-bold"
             >
-              Un mélange
-              <span class="text-[#43c841]">d'herbes à base de CBD</span>
-              prêt à l'emploi, pour vos moments de plaisir, sans le tabac!
+              <!-- Container with fixed dimensions to prevent layout shifts -->
+              <div class="flex flex-col items-center">
+                <span>Un mélange</span>
+                <!-- Wrapper for typewriter with fixed width -->
+                <div class="h-[1.2em] overflow-hidden">
+                  <span class="relative inline-block">
+                    <span
+                      class="text-[#43c841] whitespace-nowrap animate-typewriter inline-block border-r-2 pr-1"
+                    >
+                      d'herbes à base de CBD
+                    </span>
+                  </span>
+                </div>
+                <span class="mt-2"
+                  >prêt à l'emploi, pour vos moments de plaisir,</span
+                >
+                <span>sans le tabac!</span>
+              </div>
             </h1>
 
             <p class="text-muted-foreground">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus
               in libero risus semper
             </p>
-
-            <Button
-              variant="mythiques"
-              size="mythiques"
-              @click="navigateToShop"
-              class="font-tomorrow"
-            >
-              Découvrez notre Herbes Mythiques
-            </Button>
+            <div class="flex justify-center md:justify-start">
+              <Button
+                variant="mythiques"
+                size="mythiques"
+                @click="navigateToShop"
+                class="font-tomorrow"
+              >
+                Découvrez notre Herbes Mythiques
+              </Button>
+            </div>
           </div>
 
           <!-- Right Content - Product Image -->
           <div class="md:w-1/2 mt-8 md:mt-0">
             <div class="relative group">
               <div class="relative rounded-2xl overflow-hidden">
-                <img
-                  src="/Herbes-Mythiques-New-hero.jpg"
-                  alt="Herbes Mythiques"
-                  class="w-full h-full object-cover"
-                />
+                <a
+                  href="https://mrniceguyfleur.com/shop/herbes-mythiques-melange-cbd-lotus-base-florale-10g-110#attr="
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="block transition-transform hover:scale-105"
+                >
+                  <img
+                    src="/Herbes-Mythiques-New-hero.jpg"
+                    alt="Herbes Mythiques"
+                    class="w-full h-full object-cover"
+                  />
+                </a>
               </div>
             </div>
           </div>
@@ -72,7 +96,7 @@ const chefDescription = `Fleur de Lotus Bleu d'Égypte, Feuille de Molène, Feui
           class="relative -mt-16 md:-mt-24 flex flex-col md:flex-row md:items-start md:justify-between gap-8"
         >
           <!-- Botanical Illustrations -->
-          <div class="md:w-2/3">
+          <div aria-hidden="true" class="hidden md:block md:w-2/3">
             <ImgCard />
           </div>
 
@@ -101,11 +125,18 @@ const chefDescription = `Fleur de Lotus Bleu d'Égypte, Feuille de Molène, Feui
                 :key="index"
                 class="w-12 h-12 overflow-hidden rounded-full"
               >
-                <img
-                  :src="image.src"
-                  :alt="image.alt"
-                  class="w-full h-full object-cover"
-                />
+                <a
+                  href="https://mrniceguyfleur.com/shop/herbes-mythiques-melange-cbd-lotus-base-florale-10g-110#attr="
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="block transition-transform w-full h-full hover:scale-105"
+                >
+                  <img
+                    :src="image.src"
+                    :alt="image.alt"
+                    class="w-full h-full object-cover"
+                  />
+                </a>
               </div>
             </div>
           </div>
@@ -126,6 +157,34 @@ const chefDescription = `Fleur de Lotus Bleu d'Égypte, Feuille de Molène, Feui
 <style scoped>
 .container {
   min-height: calc(100vh - 5rem);
+}
+.animate-typewriter {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid;
+  width: 0;
+  animation: typewriter 3.5s cubic-bezier(0.4, 0, 0.2, 1) forwards,
+    blink 1s step-end infinite;
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  from,
+  to {
+    border-color: currentColor;
+  }
+  50% {
+    border-color: transparent;
+  }
 }
 
 @media (max-width: 768px) {

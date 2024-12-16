@@ -47,15 +47,21 @@ const botanicalImages = [
               : '100px 100px 100px 100px',
         }"
       >
-        <!-- Image with object-fit to maintain aspect ratio -->
-        <img
-          :src="image.src"
-          :alt="image.alt"
-          class="w-full h-full object-cover"
-          :style="{
-            opacity: 1, // Matches Figma opacity setting
-          }"
-        />
+        <a
+          href="https://mrniceguyfleur.com/shop/herbes-mythiques-melange-cbd-lotus-base-florale-10g-110#attr="
+          target="_blank"
+          rel="noopener noreferrer"
+          class="block transition-transform w-full h-full hover:scale-105"
+        >
+          <img
+            :src="image.src"
+            :alt="image.alt"
+            class="w-full h-full object-cover"
+            :style="{
+              opacity: 1,
+            }"
+          />
+        </a>
       </div>
     </div>
   </div>

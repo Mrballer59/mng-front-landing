@@ -142,11 +142,11 @@ const iconMap: Record<
       qu'il s'agisse de favoriser une routine de sommeil apaisante ou d'ajouter
       une touche de convivialité à un contexte social festif.
     </p>
-    <div>
+    <div class="max-w-5xl mx-auto mt-12 px-4">
       <img
         src="/Herbes Mythiques 13-1.jpg"
         alt="Hero Image"
-        class="w-full mt-12"
+        class="w-full md:w-3/4 lg:w-2/3 mx-auto object-cover rounded-lg shadow-lg"
       />
     </div>
   </section>
