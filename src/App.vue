@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Navbar from './components/Navbar.vue';
-import Hero from './components/Hero.vue';
+// import Hero from './components/Hero.vue';
+import HeroTwo from './components/Hero_copy.vue';
 // import Benefits from './components/Benefits.vue';
 import Features from './components/Features.vue';
 import Services from './components/Services.vue';
@@ -19,7 +20,8 @@ import CTASection from './components/CTASection.vue';
 
 <template>
   <Navbar />
-  <Hero />
+  <!-- <Hero /> -->
+  <HeroTwo />
   <Features />
   <AccordionSection />
   <!-- <Benefits /> -->

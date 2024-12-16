@@ -8,6 +8,7 @@ import {
   Leaf,
   Stamp,
   ShieldCheck,
+  CigaretteOff,
 } from 'lucide-vue-next';
 
 interface FeaturesProps {
@@ -19,21 +20,71 @@ interface FeaturesProps {
 
 const featureList: FeaturesProps[] = [
   {
-    icon: 'stamp',
-    title: 'Authenticité',
-    description: `Élaboré à la main avec des plantes naturelles, chaque mélange respire la pureté et l'artisanat.`,
+    icon: 'cigaretteOff',
+    title: 'Dites adieu à la nicotine une fois pour toutes',
+    description: `Abandonnez la nicotine
+                  et le tabac grâce à un
+                  mélange conçu pour
+                  votre satisfaction la plus
+                  profonde. Contrairement
+                  à la nicotine, qui
+                  provoque un pic suivi
+                  d'un crash rapide de
+                  dopamine, les alcaloïdes
+                  actifs du lotus bleu
+                  (l’apomorphine et la
+                  nuciférine) offrent une
+                  montée douce et stable,
+                  sans chute rapide, pour
+                  une satisfaction
+                  profonde sans
+                  dépendance.`,
     details: ``,
   },
   {
     icon: 'sprout',
-    title: 'Un concept moderne, 100% naturel',
-    description: `Une synergie parfaite de plantes, offrant des effets puissants pour une sensation optimal.`,
+    title: 'Votre Relaxation et Bien-être en Parfaite Synergie',
+    description: `Grâce à l'alliance puissante
+                  du CBD et du lotus bleu,
+                  notre mélange fait effet en
+                  seulement quelques minutes
+                  après inhalation. Bien que
+                  plus lent que le rush de la
+                  nicotine, il procure une
+                  satisfaction durable, sans
+                  entraîner le comportement
+                  addictif lié à la quête
+                  incessante de dopamine. Ici,
+                  les niveaux de dopamine
+                  augmentent naturellement,
+                  de façon progressive et
+                  stable, sans chute rapide,
+                  pour une expérience
+                  apaisante et équilibrée.`,
     details: '',
   },
   {
-    icon: 'shieldCheck',
-    title: 'Des propriétés synergiques sélectionnées',
-    description: `Sans nicotine, notre mélange offre une expérience pure et saine,parfaite pour votre bien-être.`,
+    icon: 'cigaretteOff',
+    title: 'Une Sensation en Bouche Hors-Pair',
+    description: `Son arôme supérieur
+                provient des terpènes de
+                notre CBD bio français,
+                mélangé à nos 9 variétés
+                uniques, offrant un goût
+                digne d'une expérience
+                coffeeshop. Composé de 2
+                fleurs sacrées et 5 feuilles
+                aromatiques soigneusement
+                sélectionnées, notre mélange
+                offre une base douce et
+                savoureuse, non irritante. Les
+                autres feuilles apportent une
+                saveur neutre, proche du thé,
+                pour un équilibre parfait.
+                Dites adieu aux goûts de foin
+                des autres mélanges et
+                bonjour à votre nouveau
+                coup de cœur.`,
     details: '',
   },
 ];
@@ -48,11 +99,12 @@ const iconMap: Record<
   leaf: Leaf,
   stamp: Stamp,
   shieldCheck: ShieldCheck,
+  cigaretteOff: CigaretteOff,
 };
 </script>
 
 <template>
-  <section id="concept" class="container py-24 sm:py-32">
+  <section id="concept" class="container py-18 sm:py-15">
     <h2 class="text-3xl md:text-4xl text-center font-bold mb-4">
       Pourquoi choisir Herbes Mythiques?®
     </h2>

@@ -125,9 +125,13 @@ les irritations et offrant un confort à chaque respiration.`,
     <div class="container py-12">
       <Card class="border border-primary/10">
         <CardHeader>
-          <h3 class="text-2xl font-semibold text-center">
+          <h3 class="text-3xl font-bold text-center">
             Découvrez notre formule unique.
           </h3>
+          <h4 class="text-md font-semibold mt-2 text-center">
+            Comment les bienfaits de nos 7 plantes mythiques agissent pour
+            transformer votre bien-être.
+          </h4>
         </CardHeader>
         <CardContent>
           <Accordion type="single" collapsible class="w-full">

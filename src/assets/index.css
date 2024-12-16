@@ -150,14 +150,11 @@ html {
 @layer base {
   html,
   body {
-    @apply overflow-x-hidden max-w-[100vw];
+    @apply font-sans overflow-x-hidden max-w-[100vw];
   }
 
   /* Container overflow control */
-  .container {
-    @apply overflow-x-hidden;
-    min-width: 320px; /* Prevents container from becoming too narrow on small devices */
-  }
+
   * {
     @apply border-border;
   }

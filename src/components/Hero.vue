@@ -47,50 +47,6 @@ const navigateToShop = () => {
             des plantes de haute qualité.
           </p>
         </div>
-
-        <!--  <div class="grid lg:grid-cols-2 gap-12 items-center">
-          Left Column: Image -->
-        <!-- <div class="relative group">
-            <div
-              class="absolute -inset-1 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-3xl blur-2xl opacity-50 group-hover:opacity-75 transition duration-500"
-            ></div>
-            <div class="relative aspect-square overflow-hidden rounded-2xl">
-              <img
-                src="/Herbes-Mythiques-New-hero.jpg"
-                alt="Herbes Mythiques"
-                class="w-full h-full object-contain object-center transform group-hover:scale-105 transition-transform duration-500"
-              />
-            </div>
-            <Button size="lg" @click="navigateToShop" class="gap-2">
-              Découvrez nos produits
-              <ArrowRight class="h-5 w-5" />
-            </Button>
-          </div> -->
-
-        <!-- Right Column: Content -->
-        <!-- <div class="space-y-8 order-1 lg:order-2">
-            <div class="space-y-6">
-              <div class="space-y-4 border-l-2 border-primary/20 pl-4">
-                <p class="text-lg text-muted-foreground">
-                  Herbes Mythiques : l'avant-goût d'un avenir de bien-être
-                  naturel. Ce mélange unique au CBD et au lotus bleu d'Égypte
-                  est conçu en France avec des plantes de haute qualité.
-                </p>
-                <p class="text-lg text-muted-foreground">
-                  Un mélange floral puissant sans nicotine, fabriqué à la main
-                  avec des plantes bio de qualité supérieure.
-                </p>
-              </div>
-
-              <div class="flex gap-4 pt-4">
-                <Button size="lg" @click="navigateToShop" class="gap-2">
-                  Découvrez nos produits
-                  <ArrowRight class="h-5 w-5" />
-                </Button>
-              </div>
-            </div>
-          </div> 
-        </div>-->
       </div>
 
       <!-- Decorative Elements -->
