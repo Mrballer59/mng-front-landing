@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { Button } from '@/components/ui/button';
-import ImgCard from './custom/ImgCard.vue';
 
 const navigateToShop = () => {
   window.location.href =
