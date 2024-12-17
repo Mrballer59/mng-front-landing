@@ -15,7 +15,8 @@ import Contact from './components/Contact.vue';
 //import FAQ from "./components/FAQ.vue";
 //import Footer from "./components/Footer.vue";
 import AccordionSection from './components/AccordionSection.vue';
-import CTASection from './components/CTASection.vue';
+// import CTASection from './components/CTASection.vue';
+import PromotionalModal from './components/ui/modal/Modal-popup.vue'; // Add this import
 </script>
 
 <template>
@@ -28,12 +29,15 @@ import CTASection from './components/CTASection.vue';
   <!-- <HowItWorks /> -->
   <!-- <Sponsors /> -->
   <Testimonials />
-  <CTASection />
+  <!-- <CTASection /> -->
   <Services />
   <!-- <Team /> -->
   <!-- <Community /> -->
   <!-- <Pricing /> -->
   <Contact />
+  <PromotionalModal />
+  <!-- Add the modal component here -->
+
   <!-- <FAQ /> -->
   <!-- <Footer /> -->
 </template>

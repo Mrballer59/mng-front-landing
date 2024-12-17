@@ -96,9 +96,9 @@ const chefDescription = `Fleur de Lotus Bleu d'Égypte, Feuille de Molène, Feui
           class="relative -mt-16 md:-mt-24 flex flex-col md:flex-row md:items-start md:justify-between gap-8"
         >
           <!-- Botanical Illustrations -->
-          <div aria-hidden="true" class="hidden md:block md:w-2/3">
+          <!-- <div aria-hidden="true" class="hidden md:block md:w-2/3">
             <ImgCard />
-          </div>
+          </div> -->
 
           <!-- Chef Section -->
           <div class="w-full md:w-[400px]">
