@@ -79,6 +79,9 @@ html {
     /* --background: 0 0% 100%;
     --foreground: 20 14.3% 4.1%; */
 
+    --card-custom: 0 0% 98%; /* For #FBFBFB in dark mode */
+    --card-custom-light: 0 0% 0%; /* For black in light mode */
+
     --background: 60 33% 96%; /* #f9f9f1 */
     --foreground: 220 7% 22%; /* #34363B */
 
@@ -92,6 +95,9 @@ html {
     --primary: 210 21% 57%; /* Changed to #7791ac */
 
     --primary-foreground: 60 9.1% 97.8%;
+
+    --highlight-green: 142 68% 53%; /* #43c841 */
+    --highlight-blue: 210 21% 57%; /* Your blue color */
 
     --secondary: 60 4.8% 95.9%;
     --secondary-foreground: 24 9.8% 10%;
@@ -132,8 +138,14 @@ html {
     --secondary: 12 6.5% 15.1%;
     --secondary-foreground: 60 9.1% 97.8%;
 
+    --highlight-green: 142 68% 53%; /* Same green in dark mode */
+    --highlight-blue: 210 21% 57%; /* Your blue color */
+
     --muted: 12 6.5% 15.1%;
     --muted-foreground: 24 5.4% 63.9%;
+
+    --card-custom: 0 0% 98%; /* #FBFBFB */
+    --card-custom-light: 0 0% 0%; /* black */
 
     --accent: 12 6.5% 15.1%;
     --accent-foreground: 60 9.1% 97.8%;

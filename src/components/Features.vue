@@ -1,15 +1,16 @@
 <script setup lang="ts">
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   TabletSmartphone,
   BadgeCheck,
   Goal,
   Sprout,
-  Leaf,
+  Sparkle,
   Stamp,
   ShieldCheck,
   CigaretteOff,
-} from 'lucide-vue-next';
+  Scale,
+} from "lucide-vue-next";
 
 interface FeaturesProps {
   icon: string;
@@ -20,8 +21,8 @@ interface FeaturesProps {
 
 const featureList: FeaturesProps[] = [
   {
-    icon: 'cigaretteOff',
-    title: 'Dites adieu à la nicotine une fois pour toutes',
+    icon: "cigaretteOff",
+    title: "Dites adieu à la nicotine une fois pour toutes",
     description: `Abandonnez la nicotine
                   et le tabac grâce à un
                   mélange conçu pour
@@ -42,8 +43,8 @@ const featureList: FeaturesProps[] = [
     details: ``,
   },
   {
-    icon: 'sprout',
-    title: 'Votre Relaxation et Bien-être en Parfaite Synergie',
+    icon: "scale",
+    title: "Votre Relaxation et Bien-être en Parfaite Synergie",
     description: `Grâce à l'alliance puissante
                   du CBD et du lotus bleu,
                   notre mélange fait effet en
@@ -61,11 +62,11 @@ const featureList: FeaturesProps[] = [
                   stable, sans chute rapide,
                   pour une expérience
                   apaisante et équilibrée.`,
-    details: '',
+    details: "",
   },
   {
-    icon: 'cigaretteOff',
-    title: 'Une Sensation en Bouche Hors-Pair',
+    icon: "sparkle",
+    title: "Une Sensation en Bouche Hors-Pair",
     description: `Son arôme supérieur
                 provient des terpènes de
                 notre CBD bio français,
@@ -85,7 +86,7 @@ const featureList: FeaturesProps[] = [
                 des autres mélanges et
                 bonjour à votre nouveau
                 coup de cœur.`,
-    details: '',
+    details: "",
   },
 ];
 const iconMap: Record<
@@ -96,23 +97,32 @@ const iconMap: Record<
   badgeCheck: BadgeCheck,
   goal: Goal,
   sprout: Sprout,
-  leaf: Leaf,
+  sparkle: Sparkle,
   stamp: Stamp,
   shieldCheck: ShieldCheck,
   cigaretteOff: CigaretteOff,
+  scale: Scale,
 };
 </script>
 
 <template>
   <section id="concept" class="container py-18 sm:py-15">
+    <div class="max-w-5xl mx-auto my-12 px-4">
+      <img
+        src="/Herbes Mythiques 13-1.jpg"
+        alt="Hero Image"
+        class="w-full md:w-3/4 lg:w-2/3 mx-auto object-cover rounded-lg shadow-lg"
+      />
+    </div>
     <h2 class="text-3xl md:text-4xl text-center font-bold mb-4">
-      Pourquoi choisir Herbes Mythiques?®
+      Pourquoi choisir
+      <span class="text-[#5D95A1]">Herbes Mythiques ? ®</span>
     </h2>
 
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
       <div v-for="{ icon, title, description } in featureList" :key="title">
         <Card
-          class="h-full bg-background border border-primary/10 hover:border-primary/20 transition-colors"
+          class="h-full transition-colors dark:bg-[#FBFBFB] bg-black dark:text-black text-white border border-primary/10 hover:border-primary/20"
         >
           <CardHeader class="flex justify-center items-center">
             <div
@@ -127,27 +137,12 @@ const iconMap: Record<
           </CardHeader>
 
           <CardContent>
-            <p class="text-muted-foreground text-center mb-4">
+            <p class="dark:text-black/70 text-white/70 text-center mb-4">
               {{ description }}
             </p>
-            <!-- <p class="text-sm text-muted-foreground/80 text-center">
-              {{ details }}
-            </p> -->
           </CardContent>
         </Card>
       </div>
-    </div>
-    <p class="md:w-2/3 mx-auto text-md text-center text-muted-foreground mt-12">
-      Ce mélange sert de base équilibrée pour accompagner tous vos moments,
-      qu'il s'agisse de favoriser une routine de sommeil apaisante ou d'ajouter
-      une touche de convivialité à un contexte social festif.
-    </p>
-    <div class="max-w-5xl mx-auto mt-12 px-4">
-      <img
-        src="/Herbes Mythiques 13-1.jpg"
-        alt="Hero Image"
-        class="w-full md:w-3/4 lg:w-2/3 mx-auto object-cover rounded-lg shadow-lg"
-      />
     </div>
   </section>
 </template>

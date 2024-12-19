@@ -1,10 +1,10 @@
 <script lang="ts" setup>
-import { ref } from 'vue';
-import { Menu } from 'lucide-vue-next';
+import { ref } from "vue";
+import { Menu } from "lucide-vue-next";
 
-import { useColorMode } from '@vueuse/core';
+import { useColorMode } from "@vueuse/core";
 const mode = useColorMode();
-mode.value = 'dark';
+mode.value = "dark";
 
 import {
   NavigationMenu,
@@ -12,7 +12,7 @@ import {
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-} from '@/components/ui/navigation-menu';
+} from "@/components/ui/navigation-menu";
 import {
   Sheet,
   SheetContent,
@@ -20,12 +20,12 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from '@/components/ui/sheet';
+} from "@/components/ui/sheet";
 
-import { Button } from '@/components/ui/button';
-import { Separator } from '@/components/ui/separator';
+import { Button } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
 
-import ToggleTheme from './ToggleTheme.vue';
+import ToggleTheme from "./ToggleTheme.vue";
 
 interface RouteProps {
   href: string;
@@ -39,28 +39,28 @@ interface RouteProps {
 
 const routeList: RouteProps[] = [
   {
-    href: '#concept',
-    label: 'Concept',
+    href: "#concept",
+    label: "Concept",
   },
   {
-    href: '#composition',
-    label: 'Composition',
+    href: "#composition",
+    label: "Composition",
   },
   {
-    href: '#testimonials',
-    label: 'Témoignages',
+    href: "#testimonials",
+    label: "Témoignages",
   },
   {
-    href: '#promotion',
-    label: 'Promotion',
+    href: "#promotion",
+    label: "Promotion",
   },
   {
-    href: '#garantie',
-    label: 'Garantie',
+    href: "#garantie",
+    label: "Garantie",
   },
   {
-    href: '#newsletter',
-    label: 'Newsletter',
+    href: "#newsletter",
+    label: "Newsletter",
   },
 ];
 
@@ -219,9 +219,13 @@ const isOpen = ref<boolean>(false);
 <style scoped>
 .shadow-light {
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.085);
+  background-color: #282828;
+  color: #f9f9f9;
 }
 
 .shadow-dark {
   box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.141);
+  background-color: #f9f9f9;
+  color: #282828;
 }
 </style>

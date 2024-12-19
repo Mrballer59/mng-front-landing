@@ -1,21 +1,26 @@
 <script setup lang="ts">
-import { Button } from '@/components/ui/button';
+import { Button } from "@/components/ui/button";
+import { useColorMode } from "@vueuse/core";
+const mode = useColorMode();
 
 const navigateToShop = () => {
   window.location.href =
-    'https://mrniceguyfleur.com/shop/herbes-mythiques-melange-cbd-lotus-base-florale-10g-110#attr=';
+    "https://mrniceguyfleur.com/shop/herbes-mythiques-melange-cbd-lotus-base-florale-10g-110#attr=";
 };
 
-const chefImages = [
-  { src: 'chef-image-1.jpg', alt: 'Chef profile 1' },
-  { src: 'chef-image-2.jpg', alt: 'Chef profile 2' },
-  { src: 'chef-image-3.jpg', alt: 'Chef profile 3' },
-  { src: 'chef-image-4.jpg', alt: 'Chef profile 4' },
-];
+// const chefImages = [
+//   { src: "chef-image-1.jpg", alt: "Chef profile 1" },
+//   { src: "chef-image-2.jpg", alt: "Chef profile 2" },
+//   { src: "chef-image-3.jpg", alt: "Chef profile 3" },
+//   { src: "chef-image-4.jpg", alt: "Chef profile 4" },
+// ];
 
-const chefDescription = `Fleur de Lotus Bleu d'Égypte, Feuille de Molène, Feuille de
-              Passiflore, Feuille de Guimauve, Fleur de Lotus Bleu d'Égypte,
-              Feuille de Molène, Feuille de Passiflore, Feuille de Guimauve`;
+// const chefDescription = `Fleur de Lotus Bleu d'Égypte, Feuille de Molène, Feuille de
+//               Passiflore, Feuille de Guimauve, Fleur de Lotus Bleu d'Égypte,
+//
+//
+//
+//                Feuille de Molène, Feuille de Passiflore, Feuille de Guimauve`;
 </script>
 
 <template>
@@ -28,16 +33,23 @@ const chefDescription = `Fleur de Lotus Bleu d'Égypte, Feuille de Molène, Feui
         <div
           class="flex flex-col md:flex-row md:items-center md:gap-12 mb-10 md:mb-10"
         >
-          <!-- Left Content -->
-          <div class="md:w-1/2 space-y-6">
+          <div class="text-center mb-4">
+            <img
+              :src="mode == 'light' ? 'hero-logo.svg' : 'hero-logo-w-bg.svg'"
+              alt="Mr Nice Guy"
+              class="mx-auto mb-4"
+            />
+          </div>
+
+          <div class="max-w-2xl mx-auto text-center">
             <h1
-              class="font-tomorrow text-3xl text-center md:text-4xl lg:text-5xl font-bold"
+              class="font-tomorrow text-3xl text-center md:text-4xl lg:text-5xl leading-relaxed font-bold"
             >
               <!-- Container with fixed dimensions to prevent layout shifts -->
               <div class="flex flex-col items-center">
-                <span>Un mélange</span>
+                <span>Un mélrange</span>
                 <!-- Wrapper for typewriter with fixed width -->
-                <div class="h-[1.2em] overflow-hidden">
+                <div class="h-[1.2em]">
                   <span class="relative inline-block">
                     <span
                       class="text-[#43c841] whitespace-nowrap animate-typewriter inline-block border-r-2 pr-1"
@@ -49,24 +61,9 @@ const chefDescription = `Fleur de Lotus Bleu d'Égypte, Feuille de Molène, Feui
                 <span class="mt-2"
                   >prêt à l'emploi, pour vos moments de plaisir,</span
                 >
-                <span>sans le tabac!</span>
+                <span class="whitespace-nowrap">sans le tabac!</span>
               </div>
             </h1>
-
-            <p class="text-muted-foreground">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus
-              in libero risus semper
-            </p>
-            <div class="flex justify-center md:justify-start">
-              <Button
-                variant="mythiques"
-                size="mythiques"
-                @click="navigateToShop"
-                class="font-tomorrow"
-              >
-                Découvrez notre Herbes Mythiques
-              </Button>
-            </div>
           </div>
 
           <!-- Right Content - Product Image -->
@@ -88,20 +85,53 @@ const chefDescription = `Fleur de Lotus Bleu d'Égypte, Feuille de Molène, Feui
               </div>
             </div>
           </div>
+          <div class="flex mt-5 justify-center md:justify-start">
+            <Button
+              variant="mythiques"
+              size="mythiques"
+              @click="navigateToShop"
+              class="font-tomorrow"
+            >
+              Découvrez notre Herbes Mythiques
+            </Button>
+          </div>
         </div>
 
         <!-- Bottom Section Container with negative margin for overlap -->
         <div
-          class="relative -mt-16 md:-mt-24 flex flex-col md:flex-row md:items-start md:justify-between gap-8"
+          class="relative mt-16 md:mt-24 flex flex-col md:flex-row md:items-start md:justify-between gap-8"
         >
+          <div class="bg-background p-6 space-y-8">
+            <!-- First paragraph -->
+            <p class="text-foreground text-lg leading-relaxed">
+              En intégrant
+              <span class="text-sky-400"
+                >l'authentique fleur de lotus bleu d'Égypte</span
+              >, qui module les récepteurs de dopamine de manière sélective, et
+              le
+              <span class="text-green-400">CBD bio</span>
+              qui agit sur les récepteurs cannabinoïdes, ce mélange favorise
+              équilibre, lucidité et bien-être profond.
+            </p>
+
+            <!-- Second paragraph -->
+            <p class="text-foreground text-lg leading-relaxed">
+              Retrouvez une
+              <span class="text-green-400">relaxation physique</span>
+              et une
+              <span class="text-sky-400">stimulation mental</span>
+              douce, et dites adieu aux pics et aux chutes liés à la dépendance
+              à la nicotine.
+            </p>
+          </div>
           <!-- Botanical Illustrations -->
           <!-- <div aria-hidden="true" class="hidden md:block md:w-2/3">
             <ImgCard />
           </div> -->
 
           <!-- Chef Section -->
-          <div class="w-full md:w-[400px]">
-            <!-- Title and Description Container -->
+          <!-- <div class="w-full md:w-[400px]">
+
             <div class="flex mt-8 md:mt-40 flex-col gap-2 mb-4">
               <div class="flex items-center gap-3">
                 <div class="h-px w-6 bg-border"></div>
@@ -115,7 +145,7 @@ const chefDescription = `Fleur de Lotus Bleu d'Égypte, Feuille de Molène, Feui
               </p>
             </div>
 
-            <!-- Chef Images Grid -->
+
             <div
               class="grid justify-items-center grid-cols-2 md:grid-cols-4 gap-3"
             >
@@ -138,17 +168,9 @@ const chefDescription = `Fleur de Lotus Bleu d'Égypte, Feuille de Molène, Feui
                 </a>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
-
-      <!-- Decorative Gradients -->
-      <div
-        class="absolute -top-20 -right-20 w-60 h-60 bg-primary/10 rounded-full blur-3xl opacity-50"
-      ></div>
-      <div
-        class="absolute -bottom-20 -left-20 w-60 h-60 bg-secondary/10 rounded-full blur-3xl opacity-50"
-      ></div>
     </div>
   </section>
 </template>
