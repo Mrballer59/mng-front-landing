@@ -1,44 +1,78 @@
 <script setup lang="ts">
-import { onMounted, ref, onUnmounted } from 'vue';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
-import { Gift, ArrowRight, Timer, X } from 'lucide-vue-next';
+import { onMounted, ref, onUnmounted, watch } from "vue";
+import { Card, CardContent } from "@/components/ui/card";
+import { Gift, ArrowRight, Timer, X } from "lucide-vue-next";
+import { Button } from "@/components/ui/button";
 
-// Control modal visibility with reactive reference
+// State and Props
 const isVisible = ref(false);
-const scrollThreshold = 300; // Number of pixels to scroll before showing modal
 
-// Navigation handler for the CTA button
-const handleClick = () => {
-  window.location.href = 'https://mrniceguyfleur.com/shop';
+const props = defineProps({
+  forceShow: {
+    type: Boolean,
+    default: false,
+  },
+});
+
+// Navigation handlers
+const handleShopClick = () => {
+  window.location.href = "https://mrniceguyfleur.com/shop";
+};
+
+const handleInfoClick = () => {
+  window.location.href =
+    "https://mrniceguyfleur.com/shop/herbes-mythiques-melange-cbd-lotus-base-florale-10g-110";
 };
 
 // Modal control functions
 const closeModal = () => {
   isVisible.value = false;
-  // Prevent showing again in this session
-  localStorage.setItem('offerModalShown', 'true');
+  localStorage.setItem("offerModalShown", "true");
+  document.body.classList.remove("overflow-hidden");
 };
+
+// Watch for force show prop
+watch(
+  () => props.forceShow,
+  (newValue) => {
+    if (newValue) {
+      isVisible.value = true;
+      document.body.classList.add("overflow-hidden");
+    }
+  }
+);
 
 // Scroll event handler
 const handleScroll = () => {
+  const conceptSection = document.getElementById("concept");
+
   if (
-    window.scrollY > scrollThreshold &&
-    !localStorage.getItem('offerModalShown')
+    conceptSection &&
+    !localStorage.getItem("offerModalShown") &&
+    !isVisible.value
   ) {
-    isVisible.value = true;
+    const conceptBottom = conceptSection.getBoundingClientRect().bottom;
+
+    if (conceptBottom <= 0) {
+      isVisible.value = true;
+      document.body.classList.add("overflow-hidden");
+    }
   }
 };
 
-// Set up and clean up scroll listener
+// Lifecycle hooks
 onMounted(() => {
-  window.addEventListener('scroll', handleScroll);
+  if (!localStorage.getItem("offerModalShown")) {
+    window.addEventListener("scroll", handleScroll);
+  }
 });
 
 onUnmounted(() => {
-  window.removeEventListener('scroll', handleScroll);
+  window.removeEventListener("scroll", handleScroll);
+  document.body.classList.remove("overflow-hidden");
 });
 </script>
+
 <template>
   <Transition
     enter-active-class="transition duration-300 ease-out"
@@ -48,31 +82,31 @@ onUnmounted(() => {
     leave-from-class="opacity-100 scale-100"
     leave-to-class="opacity-0 scale-95"
   >
-    <div
-      v-if="isVisible"
-      class="fixed inset-0 bg-background/90 backdrop-blur-md z-50"
-      @click="closeModal"
-    >
-      <!-- Modal Container: Adjusted padding and max-height for better mobile display -->
+    <!-- Step 4: Increase z-index -->
+    <div v-if="isVisible" class="fixed inset-0 z-[9999]">
+      <!-- Backdrop -->
       <div
-        class="fixed left-[50%] top-[50%] z-50 w-[calc(100%-2rem)] md:w-full max-w-4xl max-h-[90vh] overflow-y-auto translate-x-[-50%] translate-y-[-50%] p-4 md:p-6"
+        class="absolute inset-0 bg-background/90 backdrop-blur-md"
+        @click="closeModal"
+      ></div>
+
+      <!-- Modal Container -->
+      <div
+        class="fixed left-[50%] top-[50%] z-[9999] w-[calc(100%-2rem)] md:w-full max-w-4xl translate-x-[-50%] translate-y-[-50%]"
         @click.stop
       >
-        <!-- Close Button: Repositioned for better accessibility -->
+        <!-- Close Button -->
         <button
           @click="closeModal"
-          class="absolute -right-1 -top-1 md:-right-2 md:-top-2 rounded-full bg-background p-2 shadow-lg opacity-70 hover:opacity-100 transition-opacity z-50"
+          class="absolute right-2 top-2 rounded-full bg-background p-2 shadow-lg hover:bg-accent transition-colors z-[9999]"
         >
           <X class="h-4 w-4" />
         </button>
 
-        <!-- Promotional Content Card: Darker background and better mobile padding -->
-        <Card
-          class="bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-primary/10"
-        >
+        <Card class="border-primary/10">
           <CardContent class="p-4 sm:p-6 md:p-8 lg:p-12">
             <div class="grid lg:grid-cols-2 gap-6 md:gap-8 items-center">
-              <!-- Text Content: Improved spacing for mobile -->
+              <!-- Text Content -->
               <div class="space-y-4 md:space-y-6">
                 <div
                   class="inline-flex items-center gap-2 bg-primary/10 text-primary rounded-full px-3 py-1 md:px-4 md:py-1.5 font-medium text-sm"
@@ -81,7 +115,6 @@ onUnmounted(() => {
                   Offre Découverte Exclusive !
                 </div>
 
-                <!-- Responsive typography -->
                 <h2
                   class="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight"
                 >
@@ -93,7 +126,6 @@ onUnmounted(() => {
                     Pour chaque mélange Herbes Mythiques acheté, recevez :
                   </p>
 
-                  <!-- List items with adjusted spacing -->
                   <ul class="space-y-2 md:space-y-3 text-base md:text-lg">
                     <li class="flex items-start gap-2">
                       <span class="text-primary mt-1">✦</span>
@@ -114,27 +146,28 @@ onUnmounted(() => {
                   </ul>
                 </div>
 
-                <!-- Buttons with better mobile layout -->
-                <div class="flex gap-3 md:gap-4 flex-col sm:flex-row">
+                <div
+                  class="flex gap-4 flex-col sm:flex-row sm:items-center mt-6"
+                >
                   <Button
                     size="lg"
-                    class="gap-2 w-full sm:w-auto"
-                    @click="handleClick"
+                    class="w-full sm:w-auto bg-[#1C95A3] hover:bg-[#147885] text-white border-none shadow-md"
+                    @click="handleShopClick"
                   >
                     Commander maintenant
-                    <ArrowRight class="size-4" />
+                    <ArrowRight class="size-4 ml-2" />
                   </Button>
                   <Button
                     size="lg"
                     variant="outline"
-                    class="gap-2 w-full sm:w-auto"
+                    class="w-full sm:w-auto border-2 hover:bg-primary/5"
+                    @click="handleInfoClick"
                   >
                     En savoir plus
-                    <Gift class="size-4" />
+                    <Gift class="size-4 ml-2" />
                   </Button>
                 </div>
 
-                <!-- Timer info with adjusted spacing -->
                 <div
                   class="flex items-center gap-2 text-sm text-muted-foreground"
                 >
@@ -146,13 +179,14 @@ onUnmounted(() => {
                 </div>
               </div>
 
-              <!-- Image Column with improved mobile display -->
-              <div class="relative group order-first lg:order-last">
+              <!-- Image Column -->
+              <div class="relative group order-first lg:order-last lg:-mt-8">
+                <!-- Added negative margin for better vertical alignment -->
                 <div
                   class="absolute -inset-1 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-3xl blur-2xl opacity-50 group-hover:opacity-75 transition duration-500"
                 ></div>
                 <div
-                  class="relative aspect-square w-full max-w-sm mx-auto lg:max-w-none overflow-hidden rounded-2xl bg-background"
+                  class="relative w-full max-w-[280px] mx-auto lg:max-w-[390px] overflow-hidden rounded-2xl bg-background"
                 >
                   <img
                     src="/Herbes-Mythiques-hero.jpg"
@@ -169,32 +203,15 @@ onUnmounted(() => {
   </Transition>
 </template>
 
-<style scoped>
-.backdrop-blur {
-  backdrop-filter: blur(12px); /* Increased blur effect */
-}
-
-/* Prevent body scroll when modal is open */
-:deep(body.modal-open) {
+<style>
+/* Global styles */
+body.overflow-hidden {
   overflow: hidden;
+  padding-right: 15px;
 }
 
-/* Custom scrollbar for the modal */
-.overflow-y-auto {
-  scrollbar-width: thin;
-  scrollbar-color: var(--primary) transparent;
-}
-
-.overflow-y-auto::-webkit-scrollbar {
-  width: 6px;
-}
-
-.overflow-y-auto::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.overflow-y-auto::-webkit-scrollbar-thumb {
-  background-color: var(--primary);
-  border-radius: 3px;
+.backdrop-blur-md {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 </style>

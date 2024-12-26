@@ -81,6 +81,7 @@ html {
 
     --card-custom: 0 0% 98%; /* For #FBFBFB in dark mode */
     --card-custom-light: 0 0% 0%; /* For black in light mode */
+    --card-background: 0 0% 98%; /* #F9F9F9 */
 
     --background: 60 33% 96%; /* #f9f9f1 */
     --foreground: 220 7% 22%; /* #34363B */
@@ -123,6 +124,8 @@ html {
 
     --background: 220 7% 22%; /* #34363B */
     --foreground: 60 33% 96%; /* #f9f9f1 */
+
+    --card-background: 0 0% 16%; /* #282828 */
 
     --card: 24 9.8% 8%;
     --card-foreground: 0 0% 95%;

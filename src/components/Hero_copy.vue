@@ -7,33 +7,97 @@ const navigateToShop = () => {
   window.location.href =
     "https://mrniceguyfleur.com/shop/herbes-mythiques-melange-cbd-lotus-base-florale-10g-110#attr=";
 };
-
-// const chefImages = [
-//   { src: "chef-image-1.jpg", alt: "Chef profile 1" },
-//   { src: "chef-image-2.jpg", alt: "Chef profile 2" },
-//   { src: "chef-image-3.jpg", alt: "Chef profile 3" },
-//   { src: "chef-image-4.jpg", alt: "Chef profile 4" },
-// ];
-
-// const chefDescription = `Fleur de Lotus Bleu d'Égypte, Feuille de Molène, Feuille de
-//               Passiflore, Feuille de Guimauve, Fleur de Lotus Bleu d'Égypte,
-//
-//
-//
-//                Feuille de Molène, Feuille de Passiflore, Feuille de Guimauve`;
 </script>
-
 <template>
   <section class="container">
-    <!-- Main content wrapper with relative positioning -->
     <div class="relative min-h-[80vh] py-8 md:py-12">
-      <!-- Main Content Container -->
       <div class="w-full max-w-[90rem] mx-auto">
-        <!-- Hero Content -->
-        <div
-          class="flex flex-col md:flex-row md:items-center md:gap-12 mb-10 md:mb-10"
-        >
-          <div class="text-center mb-4">
+        <!-- Mobile Layout -->
+        <div class="block md:hidden">
+          <div class="flex flex-col items-center">
+            <!-- Logo -->
+            <div class="text-center mb-4">
+              <img
+                :src="mode == 'light' ? 'hero-logo.svg' : 'hero-logo-w-bg.svg'"
+                alt="Mr Nice Guy"
+                class="mx-auto mb-4"
+              />
+            </div>
+
+            <!-- Mobile Hero Text -->
+            <div class="max-w-2xl mx-auto text-center">
+              <h1
+                class="font-tomorrow text-3xl text-center leading-relaxed font-bold"
+              >
+                <div class="flex flex-col items-center">
+                  <span>Un mélrange</span>
+                  <div class="h-[1.2em]">
+                    <span class="relative inline-block">
+                      <span
+                        class="text-[#43c841] whitespace-nowrap animate-typewriter inline-block border-r-2 pr-1"
+                      >
+                        d'herbes à base de CBD
+                      </span>
+                    </span>
+                  </div>
+                  <span class="mt-2"
+                    >prêt à l'emploi, pour vos moments de plaisir,</span
+                  >
+                  <span class="whitespace-nowrap">sans le tabac!</span>
+                </div>
+              </h1>
+            </div>
+
+            <!-- Mobile Product Image -->
+            <div class="w-full mt-8">
+              <div class="relative group">
+                <div class="relative rounded-2xl overflow-hidden">
+                  <img
+                    src="/Herbes-Mythiques-New-hero.jpg"
+                    alt="Herbes Mythiques"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Mobile Button -->
+            <Button
+              variant="mythiques"
+              size="mythiques"
+              @click="navigateToShop"
+              class="font-tomorrow mt-10"
+            >
+              Découvrez notre Herbes Mythiques
+            </Button>
+            <div class="space-y-6 mt-10 px-4">
+              <p class="text-foreground leading-relaxed">
+                En intégrant
+                <span class="text-sky-400"
+                  >l'authentique fleur de lotus bleu d'Égypte</span
+                >, qui module les récepteurs de dopamine de manière sélective,
+                et le
+                <span class="text-green-400">CBD bio</span>
+                qui agit sur les récepteurs cannabinoïdes, ce mélange favorise
+                équilibre, lucidité et bien-être profond.
+              </p>
+
+              <p class="text-foreground leading-relaxed">
+                Retrouvez une
+                <span class="text-green-400">relaxation physique</span>
+                et une
+                <span class="text-sky-400">stimulation mental</span>
+                douce, et dites adieu aux pics et aux chutes liés à la
+                dépendance à la nicotine.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Desktop Layout -->
+        <div class="hidden md:block">
+          <!-- Logo and Title Section -->
+          <div class="text-center mb-8">
             <img
               :src="mode == 'light' ? 'hero-logo.svg' : 'hero-logo-w-bg.svg'"
               alt="Mr Nice Guy"
@@ -41,135 +105,74 @@ const navigateToShop = () => {
             />
           </div>
 
-          <div class="max-w-2xl mx-auto text-center">
-            <h1
-              class="font-tomorrow text-3xl text-center md:text-4xl lg:text-5xl leading-relaxed font-bold"
-            >
-              <!-- Container with fixed dimensions to prevent layout shifts -->
-              <div class="flex flex-col items-center">
-                <span>Un mélrange</span>
-                <!-- Wrapper for typewriter with fixed width -->
-                <div class="h-[1.2em]">
-                  <span class="relative inline-block">
-                    <span
-                      class="text-[#43c841] whitespace-nowrap animate-typewriter inline-block border-r-2 pr-1"
-                    >
-                      d'herbes à base de CBD
-                    </span>
-                  </span>
-                </div>
-                <span class="mt-2"
-                  >prêt à l'emploi, pour vos moments de plaisir,</span
-                >
-                <span class="whitespace-nowrap">sans le tabac!</span>
-              </div>
-            </h1>
-          </div>
+          <!-- Main Content Grid -->
+          <div class="grid grid-cols-2 gap-8">
+            <!-- Left Content -->
+            <div class="space-y-6">
+              <h1 class="font-tomorrow text-3xl leading-relaxed">
+                Un mélange d'herbes à
+                <span class="text-[#43c841]">base de CBD</span> prêt à l'emploi,
+                pour tous vos moments de plaisir, sans tabac.
+              </h1>
 
-          <!-- Right Content - Product Image -->
-          <div class="md:w-1/2 mt-8 md:mt-0">
-            <div class="relative group">
-              <div class="relative rounded-2xl overflow-hidden">
-                <a
-                  href="https://mrniceguyfleur.com/shop/herbes-mythiques-melange-cbd-lotus-base-florale-10g-110#attr="
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="block transition-transform hover:scale-105"
-                >
-                  <img
-                    src="/Herbes-Mythiques-New-hero.jpg"
-                    alt="Herbes Mythiques"
-                    class="w-full h-full object-cover"
-                  />
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="flex mt-5 justify-center md:justify-start">
-            <Button
-              variant="mythiques"
-              size="mythiques"
-              @click="navigateToShop"
-              class="font-tomorrow"
-            >
-              Découvrez notre Herbes Mythiques
-            </Button>
-          </div>
-        </div>
-
-        <!-- Bottom Section Container with negative margin for overlap -->
-        <div
-          class="relative mt-16 md:mt-24 flex flex-col md:flex-row md:items-start md:justify-between gap-8"
-        >
-          <div class="bg-background p-6 space-y-8">
-            <!-- First paragraph -->
-            <p class="text-foreground text-lg leading-relaxed">
-              En intégrant
-              <span class="text-sky-400"
-                >l'authentique fleur de lotus bleu d'Égypte</span
-              >, qui module les récepteurs de dopamine de manière sélective, et
-              le
-              <span class="text-green-400">CBD bio</span>
-              qui agit sur les récepteurs cannabinoïdes, ce mélange favorise
-              équilibre, lucidité et bien-être profond.
-            </p>
-
-            <!-- Second paragraph -->
-            <p class="text-foreground text-lg leading-relaxed">
-              Retrouvez une
-              <span class="text-green-400">relaxation physique</span>
-              et une
-              <span class="text-sky-400">stimulation mental</span>
-              douce, et dites adieu aux pics et aux chutes liés à la dépendance
-              à la nicotine.
-            </p>
-          </div>
-          <!-- Botanical Illustrations -->
-          <!-- <div aria-hidden="true" class="hidden md:block md:w-2/3">
-            <ImgCard />
-          </div> -->
-
-          <!-- Chef Section -->
-          <!-- <div class="w-full md:w-[400px]">
-
-            <div class="flex mt-8 md:mt-40 flex-col gap-2 mb-4">
-              <div class="flex items-center gap-3">
-                <div class="h-px w-6 bg-border"></div>
-                <h2 class="text-lg font-medium">
-                  Découvrez notre formule unique.
-                </h2>
-              </div>
-
-              <p class="text-sm text-muted-foreground">
-                {{ chefDescription }}
+              <p class="text-foreground text-lg leading-relaxed">
+                En intégrant
+                <span class="text-sky-400"
+                  >l'authentique fleur de lotus bleu d'Égypte</span
+                >, qui module les récepteurs de dopamine de manière sélective,
+                et le
+                <span class="text-green-400">CBD bio</span>
+                qui agit sur les récepteurs cannabinoïdes, ce mélange favorise
+                équilibre, lucidité et bien-être profond.
               </p>
+
+              <p class="text-foreground text-lg leading-relaxed">
+                Retrouvez une
+                <span class="text-green-400">relaxation physique</span>
+                et une
+                <span class="text-sky-400">stimulation mental</span>
+                douce, et dites adieu aux pics et aux chutes liés à la
+                dépendance à la nicotine.
+              </p>
+
+              <Button
+                variant="mythiques"
+                size="mythiques"
+                @click="navigateToShop"
+                class="font-tomorrow mt-6"
+              >
+                Découvrez nos Herbes Mythiques®
+              </Button>
+            </div>
+            <div>
+              <img
+                src="/Herbes-Mythiques-New-hero.jpg"
+                alt="Herbes Mythiques Detail"
+                class="w-full rounded-lg shadow-lg object-cover"
+              />
+            </div>
+            <div>
+              <img
+                src="/Herbes-Mythiques 11.jpg"
+                alt="Herbes Mythiques Detail"
+                class="w-full rounded-lg shadow-lg object-cover"
+              />
             </div>
 
-
-            <div
-              class="grid justify-items-center grid-cols-2 md:grid-cols-4 gap-3"
-            >
-              <div
-                v-for="(image, index) in chefImages"
-                :key="index"
-                class="w-12 h-12 overflow-hidden rounded-full"
-              >
-                <a
-                  href="https://mrniceguyfleur.com/shop/herbes-mythiques-melange-cbd-lotus-base-florale-10g-110#attr="
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="block transition-transform w-full h-full hover:scale-105"
-                >
-                  <img
-                    :src="image.src"
-                    :alt="image.alt"
-                    class="w-full h-full object-cover"
-                  />
-                </a>
+            <div class="grid grid-cols-2 gap-4">
+              <div class="col-span-2">
+                <img
+                  src="/Herbes-Mythiques-4-1.jpg"
+                  alt="Herbes Mythiques Product"
+                  class="w-full rounded-lg shadow-lg object-cover"
+                />
               </div>
             </div>
-          </div> -->
+          </div>
         </div>
+
+        <!-- Bottom Section (shared between mobile and desktop) -->
+        <div class="mt-12 md:mt-24"></div>
       </div>
     </div>
   </section>

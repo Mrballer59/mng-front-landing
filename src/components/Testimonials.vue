@@ -7,7 +7,7 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from '@/components/ui/card';
+} from "@/components/ui/card";
 
 import {
   Carousel,
@@ -15,9 +15,9 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from '@/components/ui/carousel';
+} from "@/components/ui/carousel";
 
-import { Star } from 'lucide-vue-next';
+import { Star } from "lucide-vue-next";
 
 interface ReviewProps {
   // image: string;
@@ -30,64 +30,63 @@ interface ReviewProps {
 const reviewList: ReviewProps[] = [
   {
     // image: 'https://github.com/shadcn.png',
-    name: 'Rachid',
-    userName: 'Client de Le couvent Rbx',
-    comment: "L'odeur et le goût vraiment bons",
+    name: "Mathias",
+    userName: "Client de Le couvent Rbx",
+    comment: "C’est super doux, j’ai envie d’en fumer pleins là.",
     rating: 5.0,
   },
   {
     // image: 'https://github.com/shadcn.png',
-    name: 'Valentin',
-    userName: 'Client de Le couvent Rbx',
-    comment: "It's super practical to roll",
+    name: "Anon",
+    userName: "Un expert en cannabis trouvé au Couvent.",
+    comment:
+      "Faut aller chercher, et vite hein ! Perdez pas votre temps. Arrêtez le tabac.",
     rating: 4.8,
   },
-
   {
-    // image: 'https://github.com/shadcn.png',
-    name: 'Bilel',
-    userName: 'Client de Le couvent Rbx',
-    comment: "It's really smooth and soft",
+    name: "Aniki",
+    userName: "Rappeur de la scène Roubaisienne",
+    comment:
+      "J'sais pas si c'est parce que t'as mis le bon dosage ou quoi, mais nan franchement, propre.",
     rating: 4.9,
   },
-  // {
-
-  //   name: 'Ethan Parker',
-  //   userName: 'Data Scientist',
-  //   comment:
-  //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod labore et dolore magna aliqua. Ut enim ad minim veniam.',
-  //   rating: 5.0,
-  // },
-  // {
-
-  //   name: 'Ava Mitchell',
-  //   userName: 'IT Project Manager',
-  //   comment:
-  //     'Lorem ipsum dolor sit amet, tempor incididunt  aliqua. Ut enim ad minim veniam, quis nostrud incididunt consectetur adipiscing elit.',
-  //   rating: 5.0,
-  // },
-  // {
-
-  //   name: 'Isabella Reed',
-  //   userName: 'DevOps Engineer',
-  //   comment:
-  //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-  //   rating: 4.9,
-  // },
+  {
+    name: "Anon 2",
+    userName: "Un connaiseur de Roubaix.",
+    comment:
+      "Nan, vrai, il est bon. J'ai envie de me faire une tisane avec. C'est pas mal !",
+    rating: 4.9,
+  },
+  {
+    // image: 'https://github.com/shadcn.png',
+    name: "Louis",
+    userName: "Un ami de Mathias",
+    comment:
+      "J'ai l'impression que c'est un mélange parfait. J'ai l'impression de courir dans une prairie.",
+    rating: 4.9,
+  },
+  {
+    // image: 'https://github.com/shadcn.png',
+    name: "Anon 3",
+    userName: "Un pote de Anon 2 aussi de Roubaix.",
+    comment: "Ouais, ouais, ça passe bien. Ça passe bien.",
+    rating: 4.9,
+  },
 ];
 </script>
 
 <template>
-  <section id="testimonials" class="container py-24 sm:py-32">
+  <section id="testimonials" class="container py-20 sm:py-32">
     <div class="text-center mb-8">
-      <h2
-        class="text-3xl md:text-4xl text-primary text-center mb-2 tracking-wider"
-      >
+      <h2 class="text-4xl md:text-4xl text-center mb-2 tracking-wider">
         Témoignages
       </h2>
 
-      <h2 class="text-4xl md:text-5xl text-center font-bold mb-4">
-        Ce qu’en pensent nos utilisateurs
+      <h2
+        class="text-4xl md:text-5xl text-center font-bold mb-4 dark:text-[#F9F9F9] text-[#363636]"
+      >
+        Ce qu’en pensent nos
+        <span class="text-[#48DC1B]"> utilisateurs </span>
       </h2>
     </div>
 
@@ -101,7 +100,7 @@ const reviewList: ReviewProps[] = [
           <iframe
             v-if="true"
             class="w-full aspect-video rounded-lg shadow-xl"
-            src="https://player.vimeo.com/video/1037265250?dnt=1&byline=0&portrait=0&title=0"
+            src="https://player.vimeo.com/video/1041404969?dnt=1&byline=0&portrait=0&title=0"
             title="Client Testimonial Video"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -114,6 +113,7 @@ const reviewList: ReviewProps[] = [
     <Carousel
       :opts="{
         align: 'start',
+        loop: true, // Enable infinite loop
       }"
       class="relative w-[80%] sm:w-[90%] lg:max-w-screen-xl mx-auto"
     >
@@ -121,37 +121,31 @@ const reviewList: ReviewProps[] = [
         <CarouselItem
           v-for="review in reviewList"
           :key="review.name"
-          class="md:basis-1/2 lg:basis-1/3"
+          class="md:basis-1/2 lg:basis-1/3 min-h-[300px]"
         >
-          <Card class="bg-muted/50 dark:bg-card">
-            <CardContent class="pt-6 pb-0">
-              <div class="flex gap-1 pb-6">
-                <Star class="size-4 fill-primary text-primary" />
-                <Star class="size-4 fill-primary text-primary" />
-                <Star class="size-4 fill-primary text-primary" />
-                <Star class="size-4 fill-primary text-primary" />
-                <Star class="size-4 fill-primary text-primary" />
-              </div>
-
-              "{{ review.comment }}"
-            </CardContent>
-
-            <CardHeader>
-              <div class="flex flex-row items-center gap-4">
-                <!-- <Avatar>
-                  <AvatarImage
-                    src="https://www.radix-vue.com/logo.svg"
-                    alt="@radix-vue"
-                  />
-                  <AvatarFallback>SV</AvatarFallback>
-                </Avatar> -->
-
-                <div class="flex flex-col">
-                  <CardTitle class="text-lg">{{ review.name }}</CardTitle>
-                  <CardDescription>{{ review.userName }}</CardDescription>
+          <Card class="dark:text-[#F9F9F9] text-[#363636] h-full">
+            <div class="flex flex-col h-full justify-between">
+              <CardContent class="pt-6 pb-0">
+                <div class="flex gap-1 pb-6">
+                  <Star class="size-4 fill-primary text-primary" />
+                  <Star class="size-4 fill-primary text-primary" />
+                  <Star class="size-4 fill-primary text-primary" />
+                  <Star class="size-4 fill-primary text-primary" />
+                  <Star class="size-4 fill-primary text-primary" />
                 </div>
-              </div>
-            </CardHeader>
+
+                "{{ review.comment }}"
+              </CardContent>
+
+              <CardHeader>
+                <div class="flex flex-row items-center gap-4">
+                  <div class="flex flex-col">
+                    <CardTitle class="text-lg">{{ review.name }}</CardTitle>
+                    <CardDescription>{{ review.userName }}</CardDescription>
+                  </div>
+                </div>
+              </CardHeader>
+            </div>
           </Card>
         </CarouselItem>
       </CarouselContent>

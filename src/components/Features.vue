@@ -107,14 +107,14 @@ const iconMap: Record<
 
 <template>
   <section id="concept" class="container py-18 sm:py-15">
-    <div class="max-w-5xl mx-auto my-12 px-4">
+    <div class="max-w-5xl mx-auto my-12 px-4 block md:hidden">
       <img
-        src="/Herbes Mythiques 13-1.jpg"
+        src="/Herbes-Mythiques 11.jpg"
         alt="Hero Image"
         class="w-full md:w-3/4 lg:w-2/3 mx-auto object-cover rounded-lg shadow-lg"
       />
     </div>
-    <h2 class="text-3xl md:text-4xl text-center font-bold mb-4">
+    <h2 class="text-3xl md:text-4xl text-center font-bold mb-4 md:mb-8">
       Pourquoi choisir
       <span class="text-[#5D95A1]">Herbes Mythiques ? ®</span>
     </h2>
@@ -122,13 +122,14 @@ const iconMap: Record<
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
       <div v-for="{ icon, title, description } in featureList" :key="title">
         <Card
-          class="h-full transition-colors dark:bg-[#FBFBFB] bg-black dark:text-black text-white border border-primary/10 hover:border-primary/20"
+          class="h-full transition-colors dark:bg-[#2925244d] light:bg-[#ffffff] dark:text-white border border-primary/10 hover:border-primary/20"
         >
           <CardHeader class="flex justify-center items-center">
-            <div
-              class="bg-primary/20 p-2 rounded-full ring-8 ring-primary/10 mb-4"
-            >
-              <component :is="iconMap[icon]" class="size-6 text-primary" />
+            <div class="p-2 rounded-full mb-4">
+              <component
+                :is="iconMap[icon]"
+                class="size-7 light:text-black dark:text-white"
+              />
             </div>
 
             <CardTitle class="text-center text-xxl">
@@ -137,7 +138,9 @@ const iconMap: Record<
           </CardHeader>
 
           <CardContent>
-            <p class="dark:text-black/70 text-white/70 text-center mb-4">
+            <p
+              class="dark:text-text-white/70 light:text-[#2925244d] text-center mb-4"
+            >
               {{ description }}
             </p>
           </CardContent>

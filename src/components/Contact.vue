@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { ref, reactive } from 'vue';
-import { Button } from './ui/button';
-import { Card, CardHeader, CardContent, CardFooter } from './ui/card';
-import { Label } from './ui/label';
-import { Input } from './ui/input';
+import { ref, reactive } from "vue";
+import { Button } from "./ui/button";
+import { Card, CardHeader, CardContent, CardFooter } from "./ui/card";
+import { Label } from "./ui/label";
+import { Input } from "./ui/input";
 // import {
 //   Select,
 //   SelectContent,
@@ -13,11 +13,11 @@ import { Input } from './ui/input';
 //   SelectValue,
 // } from "./ui/select";
 //import { Textarea } from "./ui/textarea";
-import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 
-import { AlertCircle, Mail } from 'lucide-vue-next';
+import { AlertCircle, Mail } from "lucide-vue-next";
 //(Stuff that was coming from lucide-vue-next) Building2, Phone, Mail, Clock
-import { userService } from '@/services/userService';
+import { userService } from "@/services/userService";
 
 interface ContactFormeProps {
   firstName: string;
@@ -28,31 +28,31 @@ interface ContactFormeProps {
 }
 
 const contactForm = reactive<ContactFormeProps>({
-  firstName: '',
-  lastName: '',
-  email: '',
+  firstName: "",
+  lastName: "",
+  email: "",
   // subject: "Web Development",
   // message: "",
 });
 
 const isSubmitting = ref(false);
 const invalidInputForm = ref<boolean>(false);
-const successMessage = ref<string>('');
-const errorMessage = ref<string>('');
+const successMessage = ref<string>("");
+const errorMessage = ref<string>("");
 const showSuccess = ref(false);
 
 const handleSubmit = async () => {
   try {
     // Reset states
     invalidInputForm.value = false;
-    errorMessage.value = '';
-    successMessage.value = '';
+    errorMessage.value = "";
+    successMessage.value = "";
     showSuccess.value = false;
 
     // Validate form
     if (!contactForm.firstName || !contactForm.lastName || !contactForm.email) {
       invalidInputForm.value = true;
-      errorMessage.value = 'Please fill in all required fields.';
+      errorMessage.value = "Please fill in all required fields.";
       return;
     }
 
@@ -70,9 +70,9 @@ const handleSubmit = async () => {
     showSuccess.value = true;
 
     // Optionally, reset the form after successful submission
-    contactForm.firstName = '';
-    contactForm.lastName = '';
-    contactForm.email = '';
+    contactForm.firstName = "";
+    contactForm.lastName = "";
+    contactForm.email = "";
     // contactForm.subject = "Web Development";
     // contactForm.message = "";
 
@@ -83,7 +83,7 @@ const handleSubmit = async () => {
   } catch (error: any) {
     invalidInputForm.value = true;
     errorMessage.value =
-      error.response?.data?.message || 'An error occurred. Please try again.';
+      error.response?.data?.message || "An error occurred. Please try again.";
   } finally {
     isSubmitting.value = false;
   }
@@ -93,8 +93,10 @@ const handleSubmit = async () => {
 <template>
   <section id="newsletter" class="container py-24 sm:py-32">
     <section class="grid grid-cols-1 place-items-center gap-8">
-      <h2 class="text-3xl mb-8 md:text-4xl font-bold">
-        Rejoignez le Flower Club
+      <h2 class="text-4xl md:text-5xl font-bold text-center">
+        Rejoignez le
+        <br />
+        <span class="text-[#5D95A1]">Flower Club</span>®
       </h2>
       <!-- form -->
       <Card class="bg-muted/60 dark:bg-car w-full max-w-2xl">
@@ -182,7 +184,7 @@ const handleSubmit = async () => {
                     <Mail class="size-4" />
 
                     {{
-                      isSubmitting ? 'Envoyer...' : "S'inscrire à la newsletter"
+                      isSubmitting ? "Envoyer..." : "S'inscrire à la newsletter"
                     }}
                   </Button>
                 </div>
