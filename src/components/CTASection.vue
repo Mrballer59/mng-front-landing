@@ -1,29 +1,29 @@
 <script setup lang="ts">
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
-import { Gift, ArrowRight, Timer } from 'lucide-vue-next';
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Gift, ArrowRight, Timer } from "lucide-vue-next";
 
 const handleClick = () => {
-  window.location.href = 'https://mrniceguyfleur.com/shop';
+  window.location.href = "https://mrniceguyfleur.com/shop";
 };
 </script>
 
 <template>
   <section id="promotion" class="relative py-24 sm:py-32 overflow-hidden">
     <div class="container relative z-10">
-      <!-- Main CTA -->
       <Card
         class="bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
       >
         <CardContent class="p-6 sm:p-12">
           <div class="grid lg:grid-cols-2 gap-8 items-center">
-            <!-- Text Content -->
             <div class="space-y-6">
-              <div
-                class="inline-flex items-center gap-2 bg-primary/10 text-primary rounded-full px-4 py-1.5 font-medium text-sm"
-              >
-                <Timer class="size-4" />
-                Offre Découverte Exclusive !
+              <div class="hidden lg:block">
+                <div
+                  class="inline-flex items-center gap-2 bg-primary/10 text-primary rounded-full px-4 py-1.5 font-medium text-sm"
+                >
+                  <Timer class="size-4" />
+                  Offre Découverte Exclusive !
+                </div>
               </div>
 
               <h2 class="text-4xl font-bold tracking-tight">
@@ -77,32 +77,32 @@ const handleClick = () => {
               </div>
             </div>
 
-            <!-- Image Column -->
             <div class="relative group order-first lg:order-last">
+              <div class="block lg:hidden mb-6">
+                <div
+                  class="inline-flex items-center gap-2 bg-primary/10 text-primary rounded-full px-4 py-1.5 font-medium text-sm"
+                >
+                  <Timer class="size-4" />
+                  Offre Découverte Exclusive !
+                </div>
+              </div>
               <div
                 class="absolute -inset-1 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-3xl blur-2xl opacity-50 group-hover:opacity-75 transition duration-500"
               ></div>
+              <!-- Modified image container -->
               <div
-                class="relative aspect-square w-full max-w-md mx-auto lg:max-w-none overflow-hidden rounded-2xl bg-background"
+                class="relative w-full max-w-[570px] mx-auto overflow-hidden rounded-2xl bg-background"
               >
                 <img
                   src="/Herbes-Mythiques-hero.jpg"
                   alt="Herbes Mythiques - CBD Bio Français"
-                  class="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-500"
+                  class="w-full h-auto object-contain transform group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
             </div>
           </div>
         </CardContent>
       </Card>
-
-      <!-- Additional Elements -->
-      <div
-        class="absolute -top-24 right-0 w-72 h-72 bg-primary/10 rounded-full blur-3xl opacity-30"
-      ></div>
-      <div
-        class="absolute -bottom-24 -left-12 w-72 h-72 bg-secondary/10 rounded-full blur-3xl opacity-30"
-      ></div>
     </div>
   </section>
 </template>

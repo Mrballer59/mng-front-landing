@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted, ref, onUnmounted, watch } from "vue";
+import { onMounted, ref, watch } from "vue";
 import { Card, CardContent } from "@/components/ui/card";
 import { Gift, ArrowRight, Timer, X } from "lucide-vue-next";
 import { Button } from "@/components/ui/button";
@@ -27,7 +27,7 @@ const handleInfoClick = () => {
 // Modal control functions
 const closeModal = () => {
   isVisible.value = false;
-  localStorage.setItem("offerModalShown", "true");
+  sessionStorage.setItem("modalClosed", "true"); // Remember that user closed the modal
   document.body.classList.remove("overflow-hidden");
 };
 
@@ -42,34 +42,16 @@ watch(
   }
 );
 
-// Scroll event handler
-const handleScroll = () => {
-  const conceptSection = document.getElementById("concept");
-
-  if (
-    conceptSection &&
-    !localStorage.getItem("offerModalShown") &&
-    !isVisible.value
-  ) {
-    const conceptBottom = conceptSection.getBoundingClientRect().bottom;
-
-    if (conceptBottom <= 0) {
-      isVisible.value = true;
-      document.body.classList.add("overflow-hidden");
-    }
-  }
-};
-
-// Lifecycle hooks
+// Show modal after 10 seconds if not previously closed
 onMounted(() => {
-  if (!localStorage.getItem("offerModalShown")) {
-    window.addEventListener("scroll", handleScroll);
+  if (!sessionStorage.getItem("modalClosed")) {
+    setTimeout(() => {
+      if (!isVisible.value) {
+        isVisible.value = true;
+        document.body.classList.add("overflow-hidden");
+      }
+    }, 10000); // 10 seconds
   }
-});
-
-onUnmounted(() => {
-  window.removeEventListener("scroll", handleScroll);
-  document.body.classList.remove("overflow-hidden");
 });
 </script>
 

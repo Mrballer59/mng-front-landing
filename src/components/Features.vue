@@ -46,7 +46,7 @@ const featureList: FeaturesProps[] = [
     icon: "scale",
     title: "Votre Relaxation et Bien-être en Parfaite Synergie",
     description: `Grâce à l'alliance puissante
-                  du CBD et du lotus bleu,
+                  du  <span class="text-[#43c841]">CBD</span>  et du <span class="text-[#1C95A3]">lotus bleu</span>,
                   notre mélange fait effet en
                   seulement quelques minutes
                   après inhalation. Bien que
@@ -140,9 +140,8 @@ const iconMap: Record<
           <CardContent>
             <p
               class="dark:text-text-white/70 light:text-[#2925244d] text-center mb-4"
-            >
-              {{ description }}
-            </p>
+              v-html="description"
+            ></p>
           </CardContent>
         </Card>
       </div>

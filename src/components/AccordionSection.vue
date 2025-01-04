@@ -11,7 +11,8 @@ import { Cannabis } from "lucide-vue-next";
 const compositionDetails = [
   {
     id: "item-1",
-    title: "Chanvre cultivé Français (9 Variétés de Bio Mé)",
+    mainTitle: "Chanvre cultivé Français",
+    subTitle: "(9 Variétés de CBD Bio Mélangés)",
     content: `Principes actifs : CBD, CBG, et autres cannabinoïdes mineurs. (Conforme aux normes en teneurs de THC). 
 
 Dans notre mélange, nous ajoutons une combinaison spéciale et variable de 9 variétés de chanvre CBD, ce qui confère à chaque lot une signature terpénique unique à chaque achat. 
@@ -26,7 +27,7 @@ Chaque gramme de mélange contiens en moyenne 50 mg de CBD et 10mg CBG qui appor
   },
   {
     id: "item-2",
-    title: "Fleur de Lotus Bleu d'Égypte",
+    mainTitle: "Fleur de Lotus Bleu d'Égypte",
     content: `Principes actifs : Nuciferine, Apomorphine 
 
 La fleur de lotus bleu d'Égypte est renommée pour ses propriétés relaxantes et son impact positif sur l'humeur. 
@@ -46,7 +47,7 @@ Cependant, il est important de faire preuve de prudence et de modération, car c
   },
   {
     id: "item-3",
-    title: "Feuille de Damiana",
+    mainTitle: "Feuille de Damiana",
     content: `Principes actifs : Damianin La feuille de Damiana est connue pour ses propriétés stimulantes et équilibrantes. “Alternatif au tabac”, 
 elle contient un alcaloïde appelé damianin, qui stimule le système nerveux et favorise un équilibre énergétique. Cette plante soutient la clarté mentale et la concentration tout en réduisant le stress, ce qui en fait un excellent ajout pour tout mélange destiné à favoriser la relaxation et le bien-être mental.
 
@@ -55,7 +56,7 @@ provoquer de nervosité, et favorise une attention calme et alerte.`,
   },
   {
     id: "item-4",
-    title: "Feuille de Passiflore",
+    mainTitle: "Feuille de Passiflore",
     content: `Principes actifs : Harmane, Apigénine La passiflore, ou fleur de la passion, est largement reconnue pour ses propriétés apaisantes. Elle contient de l’harmane et de l’apigénine, qui sont connus pour réduire l’anxiété et améliorer le sommeil. L’harmane aide à détendre le système nerveux, tandis que l’apigénine améliore la gestion du stress et induit un effet sédatif doux, favorisant le repos et la relaxation.
     
 Bienfaits : Cette plante apporte relaxation et soulagement du stress, calmant l’esprit et le
@@ -64,7 +65,7 @@ sommeil réparateur.`,
   },
   {
     id: "item-5",
-    title: "Feuille de Guimauve",
+    mainTitle: "Feuille de Guimauve",
     content: `Principes actifs :
 Mucilages La feuille de guimauve offre une note subtilement terreuse et un parfum léger mais apaisant.
 Lors de la consommation, elle révèle des nuances presque florales, avec une douceur naturelle
@@ -81,7 +82,7 @@ apaisante.`,
   },
   {
     id: "item-6",
-    title: "Feuille de Framboisier",
+    mainTitle: "Feuille de Framboisier",
     content: `Principes actifs : Tanins, Flavonoïdes
 
 La feuille de framboisier possède des propriétés rafraîchissantes, pour une touche de fraîcheur
@@ -98,7 +99,7 @@ bien-être général.`,
   },
   {
     id: "item-7",
-    title: "Feuille de Molène",
+    mainTitle: "Feuille de Molène",
     content: `Principes actifs : Mucilages
 
 La feuille de molène, riche en mucilage, est une plante puissante connue pour ses propriétés
@@ -137,9 +138,9 @@ les irritations et offrant un confort à chaque respiration.`,
           />
         </div>
 
-        <div class="text-2xl flex justify-center font-semibold">
+        <div class="text-3xl flex justify-center font-semibold">
           La recette
-          <span class="text-[#43c841] ml-1"> magique </span> ?
+          <span class="text-[#43c841] ml-1"> magique </span>
         </div>
       </div>
       <Card class="dark:bg-[#2D2C2E] mt-5 border border-primary/10">
@@ -162,8 +163,16 @@ les irritations et offrant un confort à chaque respiration.`,
               :key="item.id"
               :value="item.id"
             >
-              <AccordionTrigger class="hover:text-primary">
-                {{ item.title }}
+              <AccordionTrigger class="hover:text-primary whitespace-normal">
+                <div
+                  class="flex flex-col md:flex-row md:gap-2 items-start w-full"
+                >
+                  <span class="block">{{ item.mainTitle }}</span>
+                  <span
+                    class="block md:inline text-sm md:text-base mt-1 md:mt-0"
+                    >{{ item.subTitle }}</span
+                  >
+                </div>
               </AccordionTrigger>
               <AccordionContent
                 class="text-muted-foreground space-y-4 px-4 pb-4"

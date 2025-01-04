@@ -30,7 +30,7 @@ const navigateToShop = () => {
                 class="font-tomorrow text-3xl text-center leading-relaxed font-bold"
               >
                 <div class="flex flex-col items-center">
-                  <span>Un mélrange</span>
+                  <span>Un mélange</span>
                   <div class="h-[1.2em]">
                     <span class="relative inline-block">
                       <span
@@ -43,7 +43,7 @@ const navigateToShop = () => {
                   <span class="mt-2"
                     >prêt à l'emploi, pour vos moments de plaisir,</span
                   >
-                  <span class="whitespace-nowrap">sans le tabac!</span>
+                  <span class="whitespace-nowrap">sans tabac ! </span>
                 </div>
               </h1>
             </div>
@@ -66,7 +66,7 @@ const navigateToShop = () => {
               variant="mythiques"
               size="mythiques"
               @click="navigateToShop"
-              class="font-tomorrow mt-10"
+              class="font-tomorrow mt-10 px-8 py-4 text-lg"
             >
               Découvrez notre Herbes Mythiques
             </Button>
