@@ -18,9 +18,15 @@ const navigateToShop = () => {
             <!-- Logo -->
             <div class="text-center mb-4">
               <img
-                :src="mode == 'light' ? 'hero-logo.svg' : 'hero-logo-w-bg.svg'"
+                :src="
+                  mode == 'light'
+                    ? 'new-hero-mobile-dark.svg'
+                    : 'new-hero-mobile-light.svg.svg'
+                "
                 alt="Mr Nice Guy"
-                class="mx-auto mb-4"
+                class="mx-auto mb-4 w-[250px] h-auto svg-crisp"
+                width="250"
+                height="auto"
               />
             </div>
 
@@ -71,7 +77,7 @@ const navigateToShop = () => {
               Découvrez notre Herbes Mythiques
             </Button>
             <div class="space-y-6 mt-10 px-4">
-              <p class="text-foreground leading-relaxed">
+              <p class="text-foreground leading-relaxed font-teko text-2xl">
                 En intégrant
                 <span class="text-sky-400"
                   >l'authentique fleur de lotus bleu d'Égypte</span
@@ -82,7 +88,7 @@ const navigateToShop = () => {
                 équilibre, lucidité et bien-être profond.
               </p>
 
-              <p class="text-foreground leading-relaxed">
+              <p class="text-foreground leading-relaxed font-teko text-2xl">
                 Retrouvez une
                 <span class="text-green-400">relaxation physique</span>
                 et une
@@ -115,7 +121,7 @@ const navigateToShop = () => {
                 pour tous vos moments de plaisir, sans tabac.
               </h1>
 
-              <p class="text-foreground text-lg leading-relaxed">
+              <p class="text-foreground font-teko leading-relaxed text-3xl">
                 En intégrant
                 <span class="text-sky-400"
                   >l'authentique fleur de lotus bleu d'Égypte</span
@@ -126,7 +132,7 @@ const navigateToShop = () => {
                 équilibre, lucidité et bien-être profond.
               </p>
 
-              <p class="text-foreground text-lg leading-relaxed">
+              <p class="text-foreground font-teko text-3xl">
                 Retrouvez une
                 <span class="text-green-400">relaxation physique</span>
                 et une

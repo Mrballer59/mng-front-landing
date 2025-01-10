@@ -27,6 +27,7 @@ module.exports = {
         sans: ["Tomorrow", "system-ui", "-apple-system", "sans-serif"],
         // Or create a specific class for this font
         tomorrow: ["Tomorrow", "system-ui", "-apple-system", "sans-serif"],
+        teko: ["Teko", "system-ui", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",

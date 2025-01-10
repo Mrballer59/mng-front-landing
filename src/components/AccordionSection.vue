@@ -148,7 +148,7 @@ les irritations et offrant un confort à chaque respiration.`,
           <div class="flex justify-center">
             <Cannabis class="size-10 text-[#43c841]" />
           </div>
-          <h3 class="text-2xl font-bold text-center light:text-[#2925244d]">
+          <h3 class="text-3xl font-bold text-center light:text-[#2925244d]">
             Découvrez notre formule <span class="text-[#43c841]">unique</span>.
           </h3>
           <h4 class="text-md font-semibold mt-2 text-center">

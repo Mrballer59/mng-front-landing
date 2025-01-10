@@ -19,7 +19,7 @@ const handleClick = () => {
             <div class="space-y-6">
               <div class="hidden lg:block">
                 <div
-                  class="inline-flex items-center gap-2 bg-primary/10 text-primary rounded-full px-4 py-1.5 font-medium text-sm"
+                  class="inline-flex items-center gap-2 bg-primary/10 text-[#1C95A3] rounded-full px-4 py-1.5 font-medium text-sm"
                 >
                   <Timer class="size-4" />
                   Offre Découverte Exclusive !
@@ -56,7 +56,11 @@ const handleClick = () => {
               </div>
 
               <div class="flex gap-4 flex-col sm:flex-row">
-                <Button size="lg" class="gap-2" @click="handleClick">
+                <Button
+                  size="lg"
+                  class="gap-2 bg-[#1C95A3] hover:bg-[#147885]"
+                  @click="handleClick"
+                >
                   Commander maintenant
                   <ArrowRight class="size-4" />
                 </Button>
@@ -80,7 +84,7 @@ const handleClick = () => {
             <div class="relative group order-first lg:order-last">
               <div class="block lg:hidden mb-6">
                 <div
-                  class="inline-flex items-center gap-2 bg-primary/10 text-primary rounded-full px-4 py-1.5 font-medium text-sm"
+                  class="inline-flex items-center gap-2 bg-primary/10 text-[#1C95A3] rounded-full px-4 py-1.5 font-medium text-sm"
                 >
                   <Timer class="size-4" />
                   Offre Découverte Exclusive !
