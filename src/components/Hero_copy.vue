@@ -33,7 +33,7 @@ const navigateToShop = () => {
             <!-- Mobile Hero Text -->
             <div class="max-w-2xl mx-auto text-center">
               <h1
-                class="font-tomorrow text-3xl text-center leading-relaxed font-bold"
+                class="font-teko text-3xl text-center leading-relaxed font-bold"
               >
                 <div class="flex flex-col items-center">
                   <span>Un mélange</span>
@@ -72,12 +72,12 @@ const navigateToShop = () => {
               variant="mythiques"
               size="mythiques"
               @click="navigateToShop"
-              class="font-tomorrow mt-10 px-8 py-4 text-lg"
+              class="font-tomorrow mt-10 px-4 sm:px-6 md:px-8 py-3 sm:py-4 text-base sm:text-lg whitespace-normal text-center w-auto max-w-[90%] mx-auto"
             >
               Découvrez notre Herbes Mythiques
             </Button>
             <div class="space-y-6 mt-10 px-4">
-              <p class="text-foreground leading-relaxed font-teko text-2xl">
+              <p class="text-foreground leading-relaxed">
                 En intégrant
                 <span class="text-sky-400"
                   >l'authentique fleur de lotus bleu d'Égypte</span
@@ -88,7 +88,7 @@ const navigateToShop = () => {
                 équilibre, lucidité et bien-être profond.
               </p>
 
-              <p class="text-foreground leading-relaxed font-teko text-2xl">
+              <p class="text-foreground leading-relaxed">
                 Retrouvez une
                 <span class="text-green-400">relaxation physique</span>
                 et une
@@ -121,7 +121,7 @@ const navigateToShop = () => {
                 pour tous vos moments de plaisir, sans tabac.
               </h1>
 
-              <p class="text-foreground font-teko leading-relaxed text-3xl">
+              <p class="text-foreground leading-relaxed text-lg">
                 En intégrant
                 <span class="text-sky-400"
                   >l'authentique fleur de lotus bleu d'Égypte</span
@@ -132,7 +132,7 @@ const navigateToShop = () => {
                 équilibre, lucidité et bien-être profond.
               </p>
 
-              <p class="text-foreground font-teko text-3xl">
+              <p class="text-foreground text-lg leading-relaxed">
                 Retrouvez une
                 <span class="text-green-400">relaxation physique</span>
                 et une

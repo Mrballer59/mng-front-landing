@@ -17,7 +17,7 @@ import Footer from "./components/Footer.vue";
 import AccordionSection from "./components/AccordionSection.vue";
 import CTASection from "./components/CTASection.vue";
 import BackToTop from "./components/custom/BackToTop.vue";
-import ModalPopup from "./components/ui/modal/Modal-popup.vue";
+// import ModalPopup from "./components/ui/modal/Modal-popup.vue";
 </script>
 
 <template>
@@ -30,7 +30,7 @@ import ModalPopup from "./components/ui/modal/Modal-popup.vue";
   <Services />
   <CTASection />
   <Contact />
-  <ModalPopup />
+  <!-- <ModalPopup /> -->
   <!-- <Benefits /> -->
   <!-- <HowItWorks /> -->
   <!-- <Sponsors /> -->

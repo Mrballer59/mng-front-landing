@@ -123,7 +123,7 @@ onMounted(() => {
                       • 1 préroll artisanal.
                     </li>
                     <li class="pl-4 md:pl-6 text-muted-foreground">
-                      • Pack de feuilles à rouler Édition Limitée.
+                      • Pack de Feuilles à Rouler Édition Limitée.
                     </li>
                   </ul>
                 </div>

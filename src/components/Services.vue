@@ -46,7 +46,7 @@ const serviceList: ServiceProps[] = [
   <section id="garantie" class="container py-24 sm:py-32 bg-muted/30">
     <div class="mb-12">
       <h2
-        class="text-3xl md:text-5xl text-center font-bold dark:text-[#F9F9F9] text-[#363636]"
+        class="text-4xl font-teko md:text-6xl text-center font-bold dark:text-[#F9F9F9] text-[#363636]"
       >
         Achetez sans risque
       </h2>

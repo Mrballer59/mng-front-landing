@@ -165,15 +165,35 @@ html {
 @layer base {
   html,
   body {
-    @apply font-sans overflow-x-hidden max-w-[100vw];
+    @apply font-sans overflow-x-hidden w-full;
+    margin: 0;
+    padding: 0;
+  }
+  #root,
+  main,
+  .container {
+    @apply w-full max-w-full overflow-x-hidden;
   }
 
   /* Container overflow control */
 
   * {
-    @apply border-border;
+    @apply border-border box-border;
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+/* Add responsive text utilities */
+@layer utilities {
+  .text-responsive {
+    @apply text-sm sm:text-base md:text-lg;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .container-responsive {
+    @apply w-full px-4 sm:px-6 md:px-8;
   }
 }

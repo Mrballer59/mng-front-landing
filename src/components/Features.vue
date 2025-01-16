@@ -114,7 +114,9 @@ const iconMap: Record<
         class="w-full md:w-3/4 lg:w-2/3 mx-auto object-cover rounded-lg shadow-lg"
       />
     </div>
-    <h2 class="text-3xl md:text-4xl text-center font-bold mb-4 md:mb-8">
+    <h2
+      class="text-4xl font-teko md:text-5xl text-center font-bold mb-4 md:mb-8"
+    >
       Pourquoi choisir
       <span class="text-[#5D95A1]">Herbes Mythiques ? ®</span>
     </h2>
