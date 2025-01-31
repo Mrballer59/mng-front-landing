@@ -21,7 +21,7 @@ onMounted(() => {
     <!-- Mobile Version dark:bg-[#FBFBFB] -->
     <div class="block md:hidden py-12 px-6">
       <div class="container mx-auto text-center space-y-8">
-        <h2 class="text-4xl font-bold mb-8">Suivez nos chaines</h2>
+        <h2 class="text-5xl font-teko font-bold mb-8">Suivez nos chaines</h2>
 
         <div class="flex justify-center gap-8">
           <a
@@ -61,7 +61,9 @@ onMounted(() => {
         <div
           class="relative z-10 flex flex-col items-center text-center space-y-12"
         >
-          <h2 class="text-5xl font-bold tracking-wider">Suivez nos chaines</h2>
+          <h2 class="text-6xl font-bold font-teko tracking-wider">
+            Suivez nos chaines
+          </h2>
 
           <!-- Social Links with Hover Effects -->
           <div class="flex gap-16">

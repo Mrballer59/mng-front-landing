@@ -93,7 +93,7 @@ const handleSubmit = async () => {
 <template>
   <section id="newsletter" class="container py-24 sm:py-32">
     <section class="grid grid-cols-1 place-items-center gap-8">
-      <h2 class="text-4xl md:text-5xl font-bold text-center">
+      <h2 class="text-5xl font-teko md:text-6xl font-bold text-center">
         Rejoignez le
         <br />
         <span class="text-[#5D95A1]">Flower Club</span>®

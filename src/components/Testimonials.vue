@@ -78,12 +78,14 @@ const reviewList: ReviewProps[] = [
 <template>
   <section id="testimonials" class="container py-20 sm:py-32">
     <div class="text-center mb-8">
-      <h2 class="text-4xl md:text-4xl text-center mb-2 tracking-wider">
+      <h2
+        class="text-5xl font-teko md:text-5xl text-center mb-2 tracking-wider"
+      >
         Témoignages
       </h2>
 
       <h2
-        class="text-4xl md:text-5xl text-center font-bold mb-4 dark:text-[#F9F9F9] text-[#363636]"
+        class="text-4xl md:text-5xl text-center font-bold mb-4 font-teko dark:text-[#F9F9F9] text-[#363636]"
       >
         Ce qu’en pensent nos
         <span class="text-[#48DC1B]"> utilisateurs </span>

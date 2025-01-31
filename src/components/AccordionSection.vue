@@ -121,12 +121,17 @@ les irritations et offrant un confort à chaque respiration.`,
   <section id="composition">
     <div class="container py-12">
       <div class="space-y-6 md:hidden">
-        <div class="text-left">
-          <h3 class="text-2xl ml-3 md:ml-5 font-bold">
+        <div class="px-4 md:px-6 max-w-3xl mx-auto">
+          <h3
+            class="text-2xl sm:text-2xl md:text-3xl font-teko leading-relaxed text-center"
+          >
             Un mélange d'herbes mythiques, parfait
-            <span class="text-[#1C95A3]">seul</span> ou
-            <span class="text-[#43c841]">en base</span>, pour la vaporisation ou
-            une cigarette herbale en alternative au tabac.
+            <span class="text-[#1C95A3] font-semibold">seul</span> ou
+            <span class="text-[#43c841] font-semibold">en base</span>,
+            <br class="hidden sm:block" />
+            pour la vaporisation ou une cigarette herbale
+            <br class="hidden sm:block" />
+            en alternative au tabac.
           </h3>
         </div>
 
@@ -138,7 +143,7 @@ les irritations et offrant un confort à chaque respiration.`,
           />
         </div>
 
-        <div class="text-3xl flex justify-center font-semibold">
+        <div class="text-4xl font-teko flex justify-center font-semibold">
           La recette
           <span class="text-[#43c841] ml-1"> magique </span>
         </div>
@@ -148,10 +153,12 @@ les irritations et offrant un confort à chaque respiration.`,
           <div class="flex justify-center">
             <Cannabis class="size-10 text-[#43c841]" />
           </div>
-          <h3 class="text-3xl font-bold text-center light:text-[#2925244d]">
+          <h3
+            class="text-4xl font-teko font-bold text-center light:text-[#2925244d]"
+          >
             Découvrez notre formule <span class="text-[#43c841]">unique</span>.
           </h3>
-          <h4 class="text-md font-semibold mt-2 text-center">
+          <h4 class="text-md font-teko text-2xl font-semibold mt-2 text-center">
             Comment les bienfaits de nos 7 plantes mythiques agissent pour
             transformer votre bien-être.
           </h4>

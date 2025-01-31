@@ -4,7 +4,12 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Gift, ArrowRight, Timer } from "lucide-vue-next";
 
 const handleClick = () => {
-  window.location.href = "https://mrniceguyfleur.com/shop";
+  window.location.href =
+    "https://mrniceguyfleur.com/shop/herbes-mythiques-melange-cbd-lotus-base-florale-10g-110";
+};
+const handleInfoClick = () => {
+  window.location.href =
+    "https://mrniceguyfleur.com/shop/herbes-mythiques-melange-cbd-lotus-base-florale-10g-110";
 };
 </script>
 
@@ -47,10 +52,10 @@ const handleClick = () => {
                     <span>Un Goodie Bag Mr. Nice Guy comprenant :</span>
                   </li>
                   <li class="pl-6 text-muted-foreground">
-                    • 1 préroll artisanal.
+                    • 1 Préroll Artisanal.
                   </li>
                   <li class="pl-6 text-muted-foreground">
-                    • Pack de feuilles à rouler Édition Limitée.
+                    • 1 Pack de Feuilles à Rouler Édition Limitée.
                   </li>
                 </ul>
               </div>
@@ -64,7 +69,12 @@ const handleClick = () => {
                   Commander maintenant
                   <ArrowRight class="size-4" />
                 </Button>
-                <Button size="lg" variant="outline" class="gap-2">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  @click="handleInfoClick"
+                  class="gap-2"
+                >
                   En savoir plus
                   <Gift class="size-4" />
                 </Button>
